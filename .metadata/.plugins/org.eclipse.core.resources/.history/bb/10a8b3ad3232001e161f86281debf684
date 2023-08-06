@@ -1,0 +1,120 @@
+
+/*
+ * pulse_gen.c
+ *
+ *  Created on: Jul 27, 2023
+ *      Author: Dell
+ */
+#include <pulse_gen.h>
+
+#define LOAD_VAL 			 2097
+#define Systick_EN 			(1U<<0)
+#define Systick_CLKS 		(1U<<2)
+#define SysTick_COUNTFLAG 	(1U<<16)
+/*PC*/
+
+	void PG_init(void){
+		RCC->IOPENR  |= RCC_IOPENR_GPIOCEN;
+		GPIOC -> MODER = (GPIO_MODER_MODE4_0)|(GPIOC->MODER & ~GPIO_MODER_MODE4);
+		GPIOC->BSRR = (1U<<4);
+	}
+
+	int SET_FLAG(int flag){
+		if (flag!=0){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
+
+	CoroutineState loopCoroutine(uint8_t* current, uint32_t Ton, uint32_t Toff) {
+		static int state=0;
+
+		switch(state){
+			case 0:
+				state=1;
+				return RUNNING;
+			case 1:
+				GPIOC->BSRR = ~(1U<<4);
+				while((GPIOC->ODR & GPIO_ODR_OD4)){}
+				HAL_Delay(Ton);
+				GPIOC->BSRR = (1U<<4);
+				while(!(GPIOC->ODR & GPIO_ODR_OD4)){}
+				HAL_Delay(Toff);
+				//(*current)--;
+	            if (*current >= 0 /*|| !(SET_FLAG)*/) {
+	                return RUNNING;
+	            } else {
+	                state = 0;
+	                return DONE;
+	            }
+		}
+	    return DONE;
+	}
+
+	uint8_t send_pulse_v3(uint8_t freg, uint8_t duty_cycle) {
+		uint8_t total_pulses=0;
+		float Ton,Toff,Period;
+		Period=(float)(1000/freg);
+		Ton=(float)((Period*duty_cycle)/100);
+		Toff=Period-Ton;
+		CoroutineState state = READY;
+	    switch (state) {
+	        case READY:
+	            state = loopCoroutine(&state, (uint32_t)Ton,(uint32_t)Toff);
+	            break;
+	        case RUNNING:
+	            state = loopCoroutine(&state, (uint32_t)Ton,(uint32_t)Toff);
+				total_pulses++;
+	            break;
+	        case DONE:
+	            break;
+	    }
+		return total_pulses;
+	}
+
+	uint8_t send_pulse_v1(uint8_t freg, uint8_t duty_cycle){
+		uint8_t total_pulses=0;
+		float Ton,Toff,Period;
+		Period=(float)(1000/freg);
+		Ton=(float)((Period*duty_cycle)/100);
+		Toff=Period-Ton;
+		while(1){
+			int d;
+			d=SET_FLAG;
+			GPIOC->BSRR = ~(1U<<4);
+			while((GPIOC->ODR & GPIO_ODR_OD4)){}
+			HAL_Delay((uint32_t)Ton);
+			GPIOC->BSRR = (1U<<4);
+			while(!(GPIOC->ODR & GPIO_ODR_OD4)){}
+			total_pulses++;
+			HAL_Delay((uint32_t)Toff);
+			if(d){
+				break;
+			}
+			}
+		return total_pulses;
+	}
+
+
+	uint32_t send_pulse_v2(uint32_t num, uint8_t freg, uint8_t duty_cycle){
+		uint32_t total_pulses=0;
+		float Ton,Toff,Period;
+		Period=(float)(1000/freg);
+		Ton=(float)((Period*duty_cycle)/100);
+		Toff=Period-Ton;
+		while(num>0){
+			GPIOC->BSRR = ~(1U<<4);
+			while((GPIOC->ODR & GPIO_ODR_OD4)){}
+			HAL_Delay((uint32_t)Ton);
+			GPIOC->BSRR = (1U<<4);
+			while(!(GPIOC->ODR & GPIO_ODR_OD4)){}
+			total_pulses++;
+			HAL_Delay((uint32_t)Toff);
+			num--;
+			}
+		return total_pulses;
+	}
+
+

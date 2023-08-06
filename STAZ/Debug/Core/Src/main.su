@@ -1,0 +1,10 @@
+../Core/Src/main.c:98:5:__io_putchar	16	static
+../Core/Src/main.c:105:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/main.c:124:5:main	8	static
+../Core/Src/main.c:214:6:SystemClock_Config	136	static
+../Core/Src/main.c:260:6:GPIO_LEDS	8	static
+../Core/Src/main.c:270:6:MENU_USB	24	static
+../Core/Src/main.c:355:6:MENU_AFTER_RESET	24	static
+../Core/Src/main.c:385:10:ACII_TO_uint8_t	32	static
+../Core/Src/main.c:401:6:splitString	40	static
+../Core/Src/main.c:422:6:Error_Handler	8	static,ignoring_inline_asm

@@ -1,0 +1,59 @@
+/*
+ * flash.c
+ *
+ *  Created on: Jul 24, 2023
+ *      Author: Karol
+ */
+
+
+#include "flash.h"
+
+//static void Flash_Unlock(void){
+//	while ((FLASH->SR & FLASH_SR_BSY) != 0){}
+//			FLASH->PEKEYR |=FLASH_PEKEY1;
+//			FLASH->PEKEYR |=FLASH_PEKEY2;
+//}
+//
+//static void Flash_Lock(void){
+//	while ((FLASH->SR & FLASH_SR_BSY) != 0){}
+//	FLASH->PECR |=FLASH_PECR_PELOCK;
+//}
+
+//void save_data(uint32_t Adrr, uint32_t data){
+//	Flash_Unlock();
+//	/*Erase potem zapis*/
+//	FLASH->PECR |= FLASH_PECR_ERASE | FLASH_PECR_DATA;
+//	*(__IO uint32_t *)Adrr = 0;
+//	FLASH->PECR &= ~(FLASH_PECR_ERASE | FLASH_PECR_DATA);
+//	/*Write*/
+//	*(__IO uint32_t *)Adrr = data;
+//	Flash_Lock();
+//}
+
+void save_data(uint32_t Address,uint32_t data1,uint32_t data2,uint32_t data3,uint32_t data4){
+
+    HAL_FLASH_Unlock();
+	FLASH_EraseInitTypeDef EraseInitStruct;
+	EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+	EraseInitStruct.PageAddress = Address;
+	EraseInitStruct.NbPages = 1;
+
+	uint32_t PageError;
+	if (HAL_FLASHEx_Erase(&EraseInitStruct, &PageError) != HAL_OK)
+			return HAL_ERROR;
+	HAL_Delay(50);
+	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Address,(uint32_t)data1);
+	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Address+4,(uint32_t)data2);
+	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Address+8,(uint32_t)data3);
+	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Address+12,(uint32_t)data3);
+	HAL_Delay(50);
+	HAL_FLASH_Lock();
+}
+
+uint8_t read_data(uint32_t Address){
+
+	__IO uint32_t read_data = *(__IO uint32_t *)Address;
+	return (uint8_t)read_data;
+}
+
+

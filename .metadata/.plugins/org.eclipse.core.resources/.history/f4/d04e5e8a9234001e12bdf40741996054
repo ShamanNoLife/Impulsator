@@ -1,0 +1,42 @@
+/*
+ * PVD.c
+ *
+ *  Created on: Jul 24, 2023
+ *      Author: Karol
+ */
+#include  "PVD.h"
+
+//void PVD_init(void){
+//	RCC->APB1ENR |=RCC_APB1ENR_PWREN;
+//	PWR->CR |= PWR_CR_PLS_LEV7;
+//	EXTI->RTSR |=EXTI_RTSR_RT16;
+//	NVIC_EnableIRQ(PVD_IRQn);
+//	NVIC_SetPriority(PVD_IRQn,8);
+//	PWR->CR |= PWR_CR_PVDE;
+//}
+
+static void Stop_mode(void){
+    HAL_Delay(2000);
+    HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON,PWR_STOPENTRY_WFI);
+}
+
+void PVD_init(void) {
+	_PWR_CLK_ENABLE();
+	HAL_NVIC_SetPriority(PVD_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(PVD_IRQn);
+	PWR_PVDTypeDef sConfigPVD;
+	sConfigPVD.PVDLevel = PWR_PVDLEVEL_6;
+	sConfigPVD.Mode = PWR_PVD_MODE_IT_RISING;
+	HAL_PWR_PVDConfig(&sConfigPVD);
+	HAL_PWR_EnablePVD();
+}
+
+void HAL_PWR_PVDCallback(void){
+		GPIOB->ODR^=(1U<<2);
+		uint8_t state_pvd;
+		state_pvd=1;
+
+		//Stop_mode();
+}
+
+
