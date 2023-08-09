@@ -10,11 +10,7 @@
 
 #include "main.h"
 
-
 uint8_t send_pulse_v1(uint8_t freg, uint8_t duty_cycle);
 uint32_t send_pulse_v2(uint32_t num, uint8_t freg, uint8_t duty_cycle);
-void delayMS(int delay);
-
-
 
 #endif /* INC_PULSE_GEN_H_ */

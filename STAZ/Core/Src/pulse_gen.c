@@ -12,11 +12,7 @@
 #define Systick_CLKS 		(1U<<2)
 #define SysTick_COUNTFLAG 	(1U<<16)
 /*PC*/
-void PG_init(void){
-	RCC->IOPENR  |= RCC_IOPENR_GPIOCEN;
-	GPIOC -> MODER = (GPIO_MODER_MODE4_0)|(GPIOC->MODER & ~GPIO_MODER_MODE4);
-	GPIOC->BSRR = (1U<<4);
-}
+
 
 uint8_t send_pulse_v1(uint8_t freg, uint8_t duty_cycle){
 	uint8_t total_pulses=0;

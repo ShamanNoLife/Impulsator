@@ -53,24 +53,15 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-static char menu[]="---------------HOW TO USE---------------\r\nrun: Start a program\r\nstop: Stop a program\r\nread: Read the last value before changing power supply\r\n";
-static char menu_after_reset[]="\n\rProblem with USB occured\n\r---------------HOW TO USE---------------\n\r start new: give new parametrs\n\r continue: Continue from last pulse\n\r";
-static char error[]="\r\nWrong key\r\n";
-static char error_with_run[]="\r\nrun num freq duty cycle(max 99)\r\n";
-static char error_with_duty_cycle[]="\r\nToo high value of duty cycle\r\n";
-static char error_with_lenght[]="\r\nToo long command\n\r";
-char new_line[]="\r\n";
-uint32_t Addr1=0x0800FFA0;
-//uint32_t Addr2=0x0800FFB0;
-//uint32_t Addr3=0x0800FFC0;
-uint8_t value,freq,duty_cycle,fdata;
-uint32_t total_pulses=0;
-uint32_t num,data;
+uint32_t Addr_total_pulse=0x0800FFA0;
+uint32_t Addr_num=0x0800FFB0;
+uint32_t Addr_Ton=0x0800FFC0;
+uint32_t Addr_Toff=0x0800FFD0;
+uint8_t value;
+uint32_t num,data,fdata1,fdata2,fdata3,freq,duty_cycle,total_pulses=0;
 float Ton,Toff,Period;
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
-char * ptr;
-int result=1;
 static uint32_t line_length;
 static int state=0;
 /* USER CODE END PV */
@@ -79,17 +70,15 @@ static int state=0;
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 void PVD_init(void);
-void HAL_PWR_PVDCallback(void);
-uint8_t send_pulse_v1(uint8_t freg, uint8_t duty_cycle);
-uint32_t send_pulse_v2(uint32_t num, uint8_t freg, uint8_t duty_cycle);
-
+void Stop_mode(void);
 void MENU_USB(uint8_t data);
-void MENU_AFTER_RESET(uint8_t data);
+void MENU_PVD(uint8_t data);
 void PG_init(void);
 void GPIO_LEDS(void);
-void save_data(uint32_t Address,uint32_t data1,uint32_t data2,uint32_t data3,uint32_t data4);
-uint8_t read_data(uint32_t Address);
-uint32_t ACII_TO_uint8_t(const char *table);
+void save_data(uint32_t Address,uint32_t data);
+uint32_t read_data(uint32_t Address);
+void erase_data(uint32_t Address);
+uint32_t ASCII_TO_uint8_t(const char *table);
 void splitString(const char* input_string, char** tokens);
 /* USER CODE END PFP */
 
@@ -104,17 +93,24 @@ int __io_putchar(int ch)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
   if (huart == &huart2) {
+
 	  MENU_USB(value);
 	  HAL_UART_Receive_IT(&huart2, &value, 1);
+	  HAL_UART_Transmit(&huart2, &value, 1, 0);
  }
 }
 
-typedef enum {
-    READY,
-    RUNNING,
-	READ,
-    DONE
-} CoroutineState;
+void HAL_PWR_PVDCallback(void){
+    if (PWR->CSR & PWR_CSR_PVDO) {
+    	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+		save_data(Addr_total_pulse, total_pulses);
+		save_data(Addr_num, num);
+		save_data(Addr_Ton, (uint32_t)Ton);
+		save_data(Addr_Toff, (uint32_t)Toff);
+		//Stop_mode();
+    }
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -130,11 +126,10 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  //PVD_init();
+  PVD_init();
   PG_init();
   GPIO_LEDS();
   /* USER CODE END Init */
@@ -166,11 +161,11 @@ int main(void)
 	    while(!(GPIOC->ODR & GPIO_ODR_OD4)){}
 	    HAL_Delay((uint32_t)Toff);
 	    total_pulses++;
-	    if(state!=0){
+	    if(state!=0 && state!=4){
 	    state=1;
 	    }
 	    else{
-	    	state=0;
+	    	state=4;
 	    }
 	    break;
 	  case 2:
@@ -182,24 +177,24 @@ int main(void)
 	    HAL_Delay((uint32_t)Toff);
 	    total_pulses++;
 	    num--;
-	    if(num>0){
+	    if(num>0 && state!=0 && state!=4){
 	    	state=2;
 	    	}
 	    else{
-	    	state=0;
+	    	state=4;
 	    	}
 	    break;
 	  case 3:
-	    //fdata=100;
-	    //HAL_UART_Transmit(&huart2, &value, 1, 0);
-	    state=0;
-	    break;
-	  default:
-		  total_pulses=0;
-		  state=0;
-		  }
-	  	  break;
 
+		state=0;
+		break;
+	  case 4:
+		erase_data(Addr_total_pulse);
+		state=0;
+		break;
+	  default:
+	  	break;
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -224,10 +219,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -238,7 +232,7 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
@@ -267,80 +261,162 @@ void GPIO_LEDS(void){
 	GPIOB->MODER &= ((GPIOA->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
 }
 
+void PG_init(void){
+	RCC->IOPENR  |= RCC_IOPENR_GPIOCEN;
+	GPIOC -> MODER = (GPIO_MODER_MODE4_0)|(GPIOC->MODER & ~GPIO_MODER_MODE4);
+	GPIOC->BSRR = (1U<<4);
+}
+
 void MENU_USB(uint8_t value){
+char menu[]="---------------HOW TO USE---------------"
+"\r\nrun: Start a program\r\nstop: Stop a program\r\nread:"
+"Read the last value before changing power supply\r\n"
+"\r\ncont: To continue\r\n";
+char error[]="\r\nWrong key\r\n";
+char error_with_run[]="\r\nrun num freq duty cycle(max 99)\r\n";
+char error_with_duty_cycle[]="\r\nToo high value of duty cycle\r\n";
+char error_with_lenght[]="\r\nToo long command\n\r";
+int result;
+char * ptr;
  		if (value == '\r' || value == '\n') {
 			if (line_length > 0) {
 				line_buffer[line_length] = '\0';
-				splitString(line_buffer, tokens);
-				if (strncmp(line_buffer, "run",3) == 0) {
-					ptr=strpbrk(tokens[1], "oo");
-					if(!(ptr==NULL)){
-//						for(int i=2;i<4;i++){
-//							for(int j=0;j<strlen(tokens[i]);j++){
-//								result*= isdigit(tokens[i][j])/2048;
-//							}
-//						}
-							freq=ACII_TO_uint8_t(tokens[MAX_TOKENS-2]);
-							duty_cycle=ACII_TO_uint8_t(tokens[MAX_TOKENS-1]);
-							if(freq==0 || duty_cycle==0){
-								printf(error_with_run);
+					if (strncmp(line_buffer, "run",3) == 0) {
+						splitString(line_buffer, tokens);
+						ptr=strpbrk(tokens[1], "oo");
+						if(!(ptr==NULL)){
+							for(int i=2;i<MAX_TOKENS;i++){
+								result=1;
+								for(int j=0;j<strlen(tokens[i]);j++){
+									if(!isdigit(tokens[i][j])){
+										result=0;
+									}
+								}
+								if(result==0){
+									break;
+								}
 							}
-							else if(duty_cycle>=100){
-								printf(error_with_duty_cycle);
+							if(result!=0){
+									freq=ASCII_TO_uint8_t(tokens[MAX_TOKENS-2]);
+									duty_cycle=ASCII_TO_uint8_t(tokens[MAX_TOKENS-1]);
+									if(freq==0 || duty_cycle==0){
+										printf(error_with_run);
+									}
+									else if(duty_cycle>=100){
+										printf(error_with_duty_cycle);
+									}
+									else{
+										Period=(float)(1000/freq);
+										Ton=(float)((Period*duty_cycle)/100);
+										Toff=Period-Ton;
+//										save_data(Addr_Ton, (uint32_t)Ton);
+//										save_data(Addr_Toff, (uint32_t)Toff);
+										state=1;
+									}
 							}
 							else{
-							  	Period=(float)(1000/freq);
-							  	Ton=(float)((Period*duty_cycle)/100);
-							  	Toff=Period-Ton;
-								state=1;
+								printf(error_with_run);
 							}
-					}
-					else{
-//							for(int i=1;i<4;i++){
-//									result*= isdigit(tokens[i])/2048;
-//								}
-//							}
-							if(result!=0){
-								num=ACII_TO_uint8_t(tokens[MAX_TOKENS-3]);
-								freq=ACII_TO_uint8_t(tokens[MAX_TOKENS-2]);
-								duty_cycle=ACII_TO_uint8_t(tokens[MAX_TOKENS-1]);
-								if(num==0 || freq==0 || duty_cycle==0 ){
-									printf(error_with_run);
+						}
+						else{
+							for(int i=1;i<MAX_TOKENS;i++){
+								result=1;
+								for(int j=0;j<strlen(tokens[i]);j++){
+									if(!isdigit(tokens[i][j])){
+										result=0;
+									}
 								}
-								else if(duty_cycle>=100){
-									printf(error_with_duty_cycle);
+								if(result==0){
+									break;
+								}
+							}
+								if(result!=0){
+									num=ASCII_TO_uint8_t(tokens[MAX_TOKENS-3]);
+									freq=ASCII_TO_uint8_t(tokens[MAX_TOKENS-2]);
+									duty_cycle=ASCII_TO_uint8_t(tokens[MAX_TOKENS-1]);
+									if(num==0 || freq==0 || duty_cycle==0 ){
+										printf(error_with_run);
+									}
+									else if(duty_cycle>=100){
+										printf(error_with_duty_cycle);
+									}
+									else{
+										Period=(float)(1000/freq);
+										Ton=(float)((Period*duty_cycle)/100);
+										Toff=Period-Ton;
+//										save_data(Addr_num, num);
+//										save_data(Addr_Ton, (uint32_t)Ton);
+//										save_data(Addr_Toff, (uint32_t)Toff);
+										state=2;
+									}
 								}
 								else{
-								  	Period=(float)(1000/freq);
-								  	Ton=(float)((Period*duty_cycle)/100);
-								  	Toff=Period-Ton;
-								  	state=2;
+									printf(error_with_run);
 								}
-							}
-							else{
-								printf(error_with_run);
-							}
+						}
+						for (int i = 0; i < sizeof(tokens) / sizeof(tokens[0]); i++) {
+							 free(tokens[i]);
+						}
+				}
+				else if (strcmp(line_buffer, "stop") == 0){
+					state=4;
+				}
+				else if (strcmp(line_buffer, "read") == 0){
+					if(read_data(Addr_num)>0){
+						fdata1=read_data(Addr_num)-read_data(Addr_total_pulse);
+						fdata2=read_data(Addr_Ton);
+						fdata3=read_data(Addr_Toff);
 					}
-					for (int i = 0; i < sizeof(tokens) / sizeof(tokens[0]); i++) {
-						 free(tokens[i]);
+					else{
+						fdata1=read_data(Addr_total_pulse);
+						fdata2=read_data(Addr_Ton);
+						fdata3=read_data(Addr_Toff);
 					}
+				    char ch1[30];
+				    char ch2[30];
+				    char ch3[30];
+
+				    printf("\n\r Pulses: ");
+				    sprintf(ch1, "%lu", fdata1);
+				    HAL_UART_Transmit(&huart2, (uint8_t*)ch1, strlen(ch1), 200);
+
+				    printf("\n\r Ton");
+				    sprintf(ch2, "%lu", fdata2);
+				    HAL_UART_Transmit(&huart2, (uint8_t*)ch2, strlen(ch2), 200);
+
+				    printf("\n\r Toff");
+				    sprintf(ch3, "%lu", fdata3);
+				    HAL_UART_Transmit(&huart2, (uint8_t*)ch3, strlen(ch3), 200);
 
 				}
-				else if (strncmp(line_buffer, "stop",4) == 0) {
-					state=0;
+				else if (strcmp(line_buffer, "cont") == 0){
+					if(read_data(Addr_num)>0){
+						num=read_data(Addr_num)-read_data(Addr_total_pulse);
+						Ton=read_data(Addr_Ton);
+						Toff=read_data(Addr_Toff);
+						state=2;
+					}
+					else{
+						total_pulses=read_data(Addr_total_pulse);
+						Ton=read_data(Addr_Ton);
+						Toff=read_data(Addr_Toff);
+						state=1;
+					}
 				}
-				else if (strncmp(line_buffer, "read",4) == 0) {
-					state=3;
-				}
-			}
 				else {
 					printf(error);
 					printf(menu);
 				}
-			for(int i;i<line_length;i++){
-				line_buffer[i]='\0';
-				}
+				printf("\r\n");
+				for(int i;i<line_length;i++){
+					line_buffer[i]='\0';
+					}
 				line_length = 0;
+			}
+			else{
+				printf(error);
+				printf(menu);
+			}
 		}
 		else {
 			if (line_length >= LINE_MAX_LENGTH) {
@@ -352,41 +428,11 @@ void MENU_USB(uint8_t value){
 		}
 }
 
-void MENU_AFTER_RESET (uint8_t value){
-
-	if (value == '\r' || value == '\n') {
-		if (strcmp(line_buffer, "start new") == 0) {
-
-			}
-		else if (strcmp(line_buffer, "continue") == 0) {
-				if(read_data(Addr1+1)){
-					data=send_pulse_v2(read_data(Addr1)-read_data(Addr1+4), read_data(Addr1+8), read_data(Addr1+12));
-				}
-				else{
-					data=send_pulse_v1(read_data(Addr1+8), read_data(Addr1+12));
-				}
-			}
-		else{
-
-		}
-	}
-	else {
-		if (line_length >= LINE_MAX_LENGTH) {
-			line_length = 0;
-			printf(error);
-			printf(error_with_lenght);
-		}
-		line_buffer[line_length++] = value;
-	}
-
-
-}
-
-uint32_t ACII_TO_uint8_t(const char *table){
+uint32_t ASCII_TO_uint8_t(const char *table){
 	uint32_t result = 0;
 	uint32_t numvalue=0;
     int size = sizeof(table) / sizeof(char);
-    for (int i = 0; i < size-1; i++) {
+    for (int i = 0; i < size; i++) {
     	if(table[i]==' ' || table[i]=='\0'){
     		break;
     	}
@@ -397,6 +443,7 @@ uint32_t ACII_TO_uint8_t(const char *table){
     }
     return result;
 }
+
 
 void splitString(const char* input_string, char** tokens) {
 	const char spacebar[] = " \r\n";
@@ -414,6 +461,27 @@ void splitString(const char* input_string, char** tokens) {
 
 
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM2 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM2) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

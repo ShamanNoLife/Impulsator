@@ -1,5 +1,2 @@
-../Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static
-../Drivers/CMSIS/Include/core_cm0plus.h:848:22:__NVIC_SetPriority	24	static
-../Core/Src/PVD.c:18:13:Stop_mode	8	static
-../Core/Src/PVD.c:23:6:PVD_init	16	static
-../Core/Src/PVD.c:34:6:HAL_PWR_PVDCallback	24	static
+../Core/Src/PVD.c:9:6:Stop_mode	8	static
+../Core/Src/PVD.c:14:6:PVD_init	16	static

@@ -1,0 +1,774 @@
+2023-08-09 00:12:44,394 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,617x237,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-08-09 00:12:53,997 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 377657568 Bytes (1066401792)
+2023-08-09 00:12:54,661 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 420845808 Bytes (1066401792)
+2023-08-09 00:12:55,341 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 00:12:55,341 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 00:12:55,341 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2023-08-09 00:12:55,341 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2023-08-09 00:12:55,341 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 00:12:55,342 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 00:12:55,342 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 00:12:55,342 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 00:12:55,455 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 00:12:55,522 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 00:12:55,543 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 00:12:55,613 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 00:12:55,618 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 00:12:55,665 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 00:12:55,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp_save
+2023-08-09 00:12:55,767 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp
+2023-08-09 00:12:55,770 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp_save
+2023-08-09 00:12:55,818 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp
+2023-08-09 00:12:55,821 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp_save
+2023-08-09 00:12:55,900 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp
+2023-08-09 00:12:55,903 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp_save
+2023-08-09 00:12:55,973 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp
+2023-08-09 00:12:56,014 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 00:12:56,028 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 00:12:56,098 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 00:12:56,103 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 00:12:56,160 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 00:12:56,164 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 00:12:56,169 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c_save
+2023-08-09 00:12:56,254 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c
+2023-08-09 00:12:56,257 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h_save
+2023-08-09 00:12:56,315 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h
+2023-08-09 00:12:56,317 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h_save
+2023-08-09 00:12:56,388 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h
+2023-08-09 00:12:56,391 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c_save
+2023-08-09 00:12:56,471 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c
+2023-08-09 00:12:56,479 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h_save
+2023-08-09 00:12:56,542 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h
+2023-08-09 00:12:56,545 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c_save
+2023-08-09 00:12:56,621 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c
+2023-08-09 00:12:56,631 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h_save
+2023-08-09 00:12:56,695 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h
+2023-08-09 00:12:56,698 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c_save
+2023-08-09 00:12:56,771 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c
+2023-08-09 00:12:56,795 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 00:12:56,932 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 00:12:56,937 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 00:12:57,003 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 00:12:57,020 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 00:12:57,088 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 00:12:57,091 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 00:12:57,139 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 00:12:57,150 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 00:12:57,211 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 00:12:57,226 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 00:12:57,301 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 00:12:57,338 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 00:12:57,474 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 00:12:57,485 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 00:12:57,571 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 00:12:58,028 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 135mS.
+2023-08-09 00:12:58,033 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 00:12:58,174 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 00:12:59,212 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1179mS.
+2023-08-09 00:12:59,213 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 00:12:59,219 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 00:37:57,440 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 828037616 Bytes (1073741824)
+2023-08-09 00:37:58,153 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 912897400 Bytes (1073741824)
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 00:37:58,659 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 00:37:58,660 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 00:37:58,833 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 00:37:58,920 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 00:37:58,947 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 00:37:59,026 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 00:37:59,031 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 00:37:59,082 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 00:37:59,113 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp_save
+2023-08-09 00:37:59,181 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp
+2023-08-09 00:37:59,184 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp_save
+2023-08-09 00:37:59,227 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp
+2023-08-09 00:37:59,230 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp_save
+2023-08-09 00:37:59,306 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp
+2023-08-09 00:37:59,309 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp_save
+2023-08-09 00:37:59,372 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp
+2023-08-09 00:37:59,421 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 00:37:59,433 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 00:37:59,511 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 00:37:59,515 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 00:37:59,561 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 00:37:59,565 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 00:37:59,576 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c_save
+2023-08-09 00:37:59,640 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c
+2023-08-09 00:37:59,644 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h_save
+2023-08-09 00:37:59,696 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h
+2023-08-09 00:37:59,701 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h_save
+2023-08-09 00:37:59,755 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h
+2023-08-09 00:37:59,765 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c_save
+2023-08-09 00:37:59,841 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c
+2023-08-09 00:37:59,846 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h_save
+2023-08-09 00:37:59,905 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h
+2023-08-09 00:37:59,916 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c_save
+2023-08-09 00:37:59,988 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c
+2023-08-09 00:37:59,999 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h_save
+2023-08-09 00:38:00,056 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h
+2023-08-09 00:38:00,067 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c_save
+2023-08-09 00:38:00,139 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c
+2023-08-09 00:38:00,154 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 00:38:00,313 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 00:38:00,317 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 00:38:00,364 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 00:38:00,378 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 00:38:00,452 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 00:38:00,455 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 00:38:00,507 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 00:38:00,517 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 00:38:00,576 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 00:38:00,589 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 00:38:00,662 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 00:38:00,691 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 00:38:00,776 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 00:38:00,788 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 00:38:00,876 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 00:38:01,304 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 127mS.
+2023-08-09 00:38:01,309 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 00:38:01,450 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 00:38:02,476 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1167mS.
+2023-08-09 00:38:02,477 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 00:38:02,483 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-08-09 01:16:30,671 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,617x237,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-08-09 01:34:03,660 [WARN] MainPanel:381 - Warning: This peripheral has no parameters to be configured
+2023-08-09 01:34:40,018 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-08-09 01:37:52,381 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-08-09 01:39:05,399 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 518137096 Bytes (1073741824)
+2023-08-09 01:39:06,632 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 548023560 Bytes (1073741824)
+2023-08-09 01:39:08,090 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 626337048 Bytes (1073741824)
+2023-08-09 01:39:08,359 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 01:39:08,359 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 01:39:08,359 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2023-08-09 01:39:08,359 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2023-08-09 01:39:08,360 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 01:39:08,360 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 01:39:08,360 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 01:39:08,361 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 01:39:08,545 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 01:39:08,630 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 01:39:08,659 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 01:39:08,729 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 01:39:08,738 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 01:39:08,802 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 01:39:08,832 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp_save
+2023-08-09 01:39:08,900 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp
+2023-08-09 01:39:08,903 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp_save
+2023-08-09 01:39:08,952 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp
+2023-08-09 01:39:08,954 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp_save
+2023-08-09 01:39:09,026 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp
+2023-08-09 01:39:09,029 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp_save
+2023-08-09 01:39:09,095 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp
+2023-08-09 01:39:09,145 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 01:39:09,161 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 01:39:09,239 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 01:39:09,250 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 01:39:09,313 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 01:39:09,317 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 01:39:09,332 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c_save
+2023-08-09 01:39:09,412 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c
+2023-08-09 01:39:09,422 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h_save
+2023-08-09 01:39:09,477 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h
+2023-08-09 01:39:09,487 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h_save
+2023-08-09 01:39:09,552 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h
+2023-08-09 01:39:09,564 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c_save
+2023-08-09 01:39:09,643 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c
+2023-08-09 01:39:09,660 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h_save
+2023-08-09 01:39:09,719 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h
+2023-08-09 01:39:09,730 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c_save
+2023-08-09 01:39:09,801 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c
+2023-08-09 01:39:09,806 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h_save
+2023-08-09 01:39:09,859 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h
+2023-08-09 01:39:09,869 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c_save
+2023-08-09 01:39:09,940 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c
+2023-08-09 01:39:09,956 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 01:39:10,084 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 01:39:10,089 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 01:39:10,148 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 01:39:10,165 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 01:39:10,237 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 01:39:10,240 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 01:39:10,286 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 01:39:10,297 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 01:39:10,352 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 01:39:10,371 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 01:39:10,451 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 01:39:10,511 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 01:39:10,711 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 01:39:10,724 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 01:39:10,816 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 01:39:11,300 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 133mS.
+2023-08-09 01:39:11,305 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 01:39:11,460 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 01:39:12,736 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1431mS.
+2023-08-09 01:39:12,737 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-08-09 01:39:12,743 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 01:53:14,001 [INFO] MainUpdater:2868 - connection check result : 10
+2023-08-09 01:53:14,001 [INFO] MainUpdater:2868 - connection check result : 10
+2023-08-09 01:53:14,032 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-08-09 01:53:14,032 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.91
+2023-08-09 01:53:14,046 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-08-09 01:53:14,046 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-08-09 01:53:14,046 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-08-09 01:53:14,047 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-08-09 01:53:14,050 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 762809856 Bytes (1073741824)
+2023-08-09 01:53:14,053 [INFO] MicroXplorer:468 - Change Database Path : C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 01:53:14,053 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.70
+2023-08-09 01:53:22,680 [INFO] OpenFileManager:308 - Change cursor
+2023-08-09 01:53:22,689 [INFO] RulesReader:64 - Compatibility file has been processed (283 Rules)
+2023-08-09 01:53:22,692 [INFO] Mcu:1946 - Initializing MCU STM32L073R(B-Z)Tx STM32L073RZTx STM32L073RZT3
+2023-08-09 01:53:23,474 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-08-09 01:53:23,767 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-08-09 01:53:23,767 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-08-09 01:53:23,767 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-08-09 01:53:23,767 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-08-09 01:53:23,767 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,775 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,776 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,776 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,776 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:53:23,850 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-08-09 01:53:24,923 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-08-09 01:53:25,143 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 373593112 Bytes (1073741824)
+2023-08-09 01:53:25,164 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-08-09 01:53:25,164 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.1
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.3
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.4
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.0
+2023-08-09 01:53:25,164 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.3
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2023-08-09 01:53:25,165 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.5.3
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.5.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-08-09 01:53:25,166 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2023-08-09 01:53:25,167 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-08-09 01:53:25,324 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-08-09 01:53:25,324 [INFO] PinOutPanel:1499 - setPackage(STM32L073RZTx,LQFP64)
+2023-08-09 01:53:25,474 [INFO] UtilMem:75 - Before build in PCC Used Memory: 526679872 Bytes (1073741824)
+2023-08-09 01:53:25,605 [INFO] UtilMem:75 - After build in PCC Used Memory: 575436608 Bytes (1073741824)
+2023-08-09 01:53:25,608 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,626 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,626 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,626 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:53:25,660 [INFO] CADModel:165 - CPN selected for project levelSTM32L073RZT3
+2023-08-09 01:53:25,660 [INFO] CADModel:114 - Register for checkConnection events
+2023-08-09 01:53:25,698 [INFO] OpenFileManager:328 - Restore cursor
+2023-08-09 01:55:07,090 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 369349224 Bytes (1073741824)
+2023-08-09 01:55:08,199 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 399397328 Bytes (1073741824)
+2023-08-09 01:55:09,962 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 511838704 Bytes (1073741824)
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 01:55:10,114 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 01:55:10,115 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 01:55:10,301 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 01:55:10,385 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 01:55:10,417 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 01:55:10,478 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 01:55:10,483 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 01:55:10,535 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 01:55:10,564 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp_save
+2023-08-09 01:55:10,635 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp
+2023-08-09 01:55:10,637 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp_save
+2023-08-09 01:55:10,680 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp
+2023-08-09 01:55:10,683 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp_save
+2023-08-09 01:55:10,747 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp
+2023-08-09 01:55:10,749 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp_save
+2023-08-09 01:55:10,810 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp
+2023-08-09 01:55:10,858 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 01:55:10,872 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 01:55:10,937 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 01:55:10,941 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 01:55:10,996 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 01:55:11,000 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 01:55:11,011 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c_save
+2023-08-09 01:55:11,084 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c
+2023-08-09 01:55:11,088 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h_save
+2023-08-09 01:55:11,144 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h
+2023-08-09 01:55:11,148 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h_save
+2023-08-09 01:55:11,202 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h
+2023-08-09 01:55:11,213 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c_save
+2023-08-09 01:55:11,294 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c
+2023-08-09 01:55:11,311 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h_save
+2023-08-09 01:55:11,362 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h
+2023-08-09 01:55:11,373 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c_save
+2023-08-09 01:55:11,444 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c
+2023-08-09 01:55:11,455 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h_save
+2023-08-09 01:55:11,506 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h
+2023-08-09 01:55:11,519 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c_save
+2023-08-09 01:55:11,595 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c
+2023-08-09 01:55:11,611 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 01:55:11,727 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 01:55:11,737 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 01:55:11,790 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 01:55:11,805 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 01:55:11,868 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 01:55:11,871 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 01:55:11,913 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 01:55:11,923 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 01:55:11,998 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 01:55:12,012 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 01:55:12,104 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 01:55:12,136 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 01:55:12,198 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 01:55:12,209 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 01:55:12,274 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 01:55:12,877 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 251mS.
+2023-08-09 01:55:12,882 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 01:55:13,021 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 01:55:13,023 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-08-09 01:55:13,026 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-08-09 01:55:13,036 [INFO] ApiDbMcu:507 - Load IP Config File for TOUCHSENSING
+2023-08-09 01:55:14,106 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1224mS.
+2023-08-09 01:55:14,107 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-08-09 01:55:14,111 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 01:57:15,488 [INFO] MainUpdater:2868 - connection check result : 10
+2023-08-09 01:57:15,488 [INFO] MainUpdater:2868 - connection check result : 10
+2023-08-09 01:57:15,532 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-08-09 01:57:15,532 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.91
+2023-08-09 01:57:15,572 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-08-09 01:57:15,572 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-08-09 01:57:15,572 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-08-09 01:57:15,573 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-08-09 01:57:15,575 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 369177600 Bytes (1073741824)
+2023-08-09 01:57:15,586 [INFO] MicroXplorer:468 - Change Database Path : C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 01:57:15,586 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.70
+2023-08-09 01:57:17,718 [INFO] OpenFileManager:308 - Change cursor
+2023-08-09 01:57:17,732 [INFO] RulesReader:64 - Compatibility file has been processed (283 Rules)
+2023-08-09 01:57:17,738 [INFO] Mcu:1946 - Initializing MCU STM32L073R(B-Z)Tx STM32L073RZTx STM32L073RZT3
+2023-08-09 01:57:18,615 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-08-09 01:57:18,908 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-08-09 01:57:18,908 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-08-09 01:57:18,908 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-08-09 01:57:18,908 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-08-09 01:57:18,908 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,915 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-08-09 01:57:18,998 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-08-09 01:57:20,043 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-08-09 01:57:20,265 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 735515152 Bytes (1073741824)
+2023-08-09 01:57:20,325 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-08-09 01:57:20,325 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.1
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.3
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.4
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-08-09 01:57:20,325 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.3
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.5.3
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.5.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-08-09 01:57:20,326 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2023-08-09 01:57:20,327 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-08-09 01:57:20,409 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-08-09 01:57:20,410 [INFO] PinOutPanel:1499 - setPackage(STM32L073RZTx,LQFP64)
+2023-08-09 01:57:20,587 [INFO] UtilMem:75 - Before build in PCC Used Memory: 382939592 Bytes (1073741824)
+2023-08-09 01:57:20,793 [INFO] UtilMem:75 - After build in PCC Used Memory: 431700424 Bytes (1073741824)
+2023-08-09 01:57:20,802 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-08-09 01:57:20,853 [INFO] CADModel:165 - CPN selected for project levelSTM32L073RZT3
+2023-08-09 01:57:20,853 [INFO] CADModel:114 - Register for checkConnection events
+2023-08-09 01:57:20,922 [INFO] OpenFileManager:328 - Restore cursor
+2023-08-09 01:57:41,919 [INFO] Gpio:273 - dependency for GPIO [SYS, USART2, USB]
+2023-08-09 01:58:00,385 [INFO] Gpio:273 - dependency for GPIO [SYS, USART2, USB]
+2023-08-09 02:04:24,782 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 606238720 Bytes (1073741824)
+2023-08-09 02:04:24,881 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 625639424 Bytes (1073741824)
+2023-08-09 02:04:25,167 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 653430816 Bytes (1073741824)
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 02:04:25,330 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 02:04:25,330 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 02:04:25,523 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 02:04:25,582 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 02:04:25,629 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 02:04:25,695 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 02:04:25,704 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 02:04:25,768 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 02:04:25,814 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp_save
+2023-08-09 02:04:25,877 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_vars.tmp
+2023-08-09 02:04:25,883 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp_save
+2023-08-09 02:04:25,931 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_inc.tmp
+2023-08-09 02:04:25,945 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp_save
+2023-08-09 02:04:26,018 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_HalInit.tmp
+2023-08-09 02:04:26,026 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp_save
+2023-08-09 02:04:26,097 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\usb_Msp.tmp
+2023-08-09 02:04:26,163 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 02:04:26,182 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 02:04:26,264 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 02:04:26,272 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 02:04:26,334 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 02:04:26,337 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2023-08-09 02:04:26,355 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c_save
+2023-08-09 02:04:26,422 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.c
+2023-08-09 02:04:26,430 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h_save
+2023-08-09 02:04:26,488 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usb_device.h
+2023-08-09 02:04:26,497 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h_save
+2023-08-09 02:04:26,561 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.h
+2023-08-09 02:04:26,577 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c_save
+2023-08-09 02:04:26,661 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\Target\usbd_conf.c
+2023-08-09 02:04:26,676 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h_save
+2023-08-09 02:04:26,733 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.h
+2023-08-09 02:04:26,749 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c_save
+2023-08-09 02:04:26,825 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_desc.c
+2023-08-09 02:04:26,833 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h_save
+2023-08-09 02:04:26,890 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.h
+2023-08-09 02:04:26,906 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c_save
+2023-08-09 02:04:26,982 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\USB_DEVICE\App\usbd_cdc_if.c
+2023-08-09 02:04:27,002 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 02:04:27,069 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 02:04:27,077 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 02:04:27,133 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 02:04:27,153 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 02:04:27,229 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 02:04:27,237 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 02:04:27,285 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 02:04:27,300 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 02:04:27,365 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 02:04:27,385 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 02:04:27,459 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 02:04:27,493 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 02:04:27,557 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 02:04:27,573 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 02:04:27,662 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 02:04:28,516 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 513mS.
+2023-08-09 02:04:28,521 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 02:04:28,665 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 02:04:28,672 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-08-09 02:04:28,680 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-08-09 02:04:28,693 [INFO] ApiDbMcu:507 - Load IP Config File for TOUCHSENSING
+2023-08-09 02:04:30,363 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1842mS.
+2023-08-09 02:04:30,364 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-08-09 02:04:30,368 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 04:07:07,528 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 350483960 Bytes (1024458752)
+2023-08-09 04:07:08,353 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 459701256 Bytes (1024458752)
+2023-08-09 04:07:08,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-09 04:07:08,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-08-09 04:07:08,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-09 04:07:08,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-09 04:07:08,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-09 04:07:08,481 [INFO] CodeGenerator:799 - code generatio: config db path: C:/Users/Dell/.stm32cubemx/databases/DB.6.0.70/db/
+2023-08-09 04:07:08,581 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp_save
+2023-08-09 04:07:08,657 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\license.tmp
+2023-08-09 04:07:08,684 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c_save
+2023-08-09 04:07:08,750 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\gpio.c
+2023-08-09 04:07:08,754 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h_save
+2023-08-09 04:07:08,819 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\gpio.h
+2023-08-09 04:07:08,866 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c_save
+2023-08-09 04:07:08,954 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\usart.c
+2023-08-09 04:07:08,957 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h_save
+2023-08-09 04:07:09,011 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\usart.h
+2023-08-09 04:07:09,027 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c_save
+2023-08-09 04:07:09,167 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_it.c
+2023-08-09 04:07:09,176 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h_save
+2023-08-09 04:07:09,244 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_it.h
+2023-08-09 04:07:09,260 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c_save
+2023-08-09 04:07:09,342 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_msp.c
+2023-08-09 04:07:09,346 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp_save
+2023-08-09 04:07:09,401 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\MXTmpFiles\system.tmp
+2023-08-09 04:07:09,411 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c_save
+2023-08-09 04:07:09,462 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\stm32l0xx_hal_timebase_tim.c
+2023-08-09 04:07:09,475 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h_save
+2023-08-09 04:07:09,610 [INFO] CodeEngine:335 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\stm32l0xx_hal_conf.h
+2023-08-09 04:07:09,645 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h_save
+2023-08-09 04:07:09,720 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Inc\main.h
+2023-08-09 04:07:09,732 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c_save
+2023-08-09 04:07:09,815 [INFO] CodeEngine:279 - Generated code: C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\Core\Src\main.c
+2023-08-09 04:07:10,244 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 111mS.
+2023-08-09 04:07:10,247 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-09 04:07:10,387 [INFO] ConfigFileManager:1457 - The Die is : DIE447
+2023-08-09 04:07:11,550 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1303mS.
+2023-08-09 04:07:11,550 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-09 04:07:11,553 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

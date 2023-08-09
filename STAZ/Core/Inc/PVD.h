@@ -11,6 +11,6 @@
 #include "main.h"
 #include "flash.h"
 void PVD_init(void);
-void HAL_PWR_PVDCallback(void);
+void Stop_mode(void);
 
 #endif /* INC_PVD_H_ */
