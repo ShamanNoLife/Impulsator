@@ -146,12 +146,13 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart2, &value, 1);
-
+  printf("dupa");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
+
 	switch(state) {
 	  case 1:
 	    GPIOC->BSRR = ~(1U<<4);
@@ -193,6 +194,7 @@ int main(void)
 		state=0;
 		break;
 	  default:
+		//  printf("dupa");
 	  	break;
 	  }
     /* USER CODE END WHILE */

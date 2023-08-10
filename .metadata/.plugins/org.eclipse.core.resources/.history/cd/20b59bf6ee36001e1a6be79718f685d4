@@ -1,0 +1,15 @@
+/*
+ * tim6.c
+ *
+ *  Created on: Aug 9, 2023
+ *      Author: Dell
+ */
+#include "tim6.h"
+
+void TIM6_init(void){
+	RCC->
+
+
+
+}
+

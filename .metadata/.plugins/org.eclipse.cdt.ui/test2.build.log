@@ -1,0 +1,17 @@
+07:57:13 **** Incremental Build of configuration Debug for project test2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l0xx_hal_msp.d" -MT"Core/Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc -o "test2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\test2\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test2.elf
+ 
+arm-none-eabi-size   test2.elf 
+arm-none-eabi-objdump -h -S  test2.elf  > "test2.list"
+   text	   data	    bss	    dec	    hex	filename
+  29496	    400	   2304	  32200	   7dc8	test2.elf
+Finished building: default.size.stdout
+ 
+Finished building: test2.list
+ 
+
+07:57:14 Build Finished. 0 errors, 0 warnings. (took 1s.70ms)
+
