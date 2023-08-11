@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -29,10 +28,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "tim.h"
+#include "pulse_gen.h"
+#include "PVD.H"
+#include "tim6.h"
 #include "pulse_gen.h"
 #include "flash.h"
-#include "PVD.H"
+//#include "PVD.H"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,15 +62,17 @@ uint32_t Addr_Ton=0x0800FFC0;
 uint32_t Addr_Toff=0x0800FFD0;
 uint32_t Addr_freq=0x0800FFE0;
 uint32_t Addr_duty_cycle=0x0800FFF0;
-uint8_t value;
-int flag=0;
+uint8_t value, bb;
 uint32_t num,data,freq,duty_cycle,fdata1,fdata2,fdata3,fdata4,fdata5,fdata6,total_pulses=0;
 float Ton,Toff,Period;
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
 static uint32_t line_length;
+static uint32_t adc_val;
+static float buffer;
+static int flag=3;
 static int state;
-static int pvd=0;
+static int pvd=1;
 static char menu[]="\n\r---------------HOW TO USE---------------\n\rrun: Start a program\n\rstop: Stop a program\n\rcont: To continue\n\r";
 static char error[]="\n\rWrong key\n\r";
 static char error_with_run[]="\r\nrun num freq duty cycle(max 99) or run oo(infinitive) freq duty cycle(max 99)\n\r";
@@ -115,14 +118,22 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
  }
 }
 
-void HAL_PWR_PVDCallback(void){
-    if (PWR->CSR & PWR_CSR_PVDO) {
-    	GPIOB->ODR&=~(1U<<1);
-		pvd=1;
-		state=3;
-		//Stop_mode();
-    }
-}
+//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+//{
+//   adc_val = HAL_ADC_GetValue(hadc);
+//   buffer= 3.3f * adc_val / 4096.0f;
+//   if(buffer<3.1f){
+//	   		GPIOB->ODR=~(1U<<1);
+//	   		GPIOA->ODR=~(1U<<5);
+//	   		pvd=1;
+//	   		state=3;
+//	   		Stop_mode();
+//   }
+//   else{
+//	   pvd=0;
+//   }
+//}
+
 void TIM6_Callback(void){
 	if(state==1 || state==2){
 		GPIOA->ODR^=(1U<<5);
@@ -130,6 +141,18 @@ void TIM6_Callback(void){
 	else{
 		GPIOA->ODR=(1U<<5);
 	}
+}
+
+void HAL_PWR_PVDCallback(void){
+    if (pvd==0) {
+		pvd=1;
+		state=3;
+   		GPIOB->ODR=~(1U<<1);
+   		GPIOA->ODR=~(1U<<5);
+    }
+    else{
+    	pvd=0;
+    }
 }
 /* USER CODE END 0 */
 
@@ -149,7 +172,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  PVD_init();
   PG_init();
   GPIO_LEDS();
   TIM6_init();
@@ -165,17 +187,29 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
+
+//  if(HAL_ADCEx_Calibration_Start(&hadc,ADC_SINGLE_ENDED) != HAL_OK)
+//                Error_Handler();
+//  if(HAL_ADC_Start_IT(&hadc) != HAL_OK)
+//                Error_Handler();
+//  if(HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1) != HAL_OK)
+//                Error_Handler();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
-	  if(pvd!=1){
+	  if(pvd==1){
+		  GPIOB->ODR^=(1U<<3);
+		  Stop_mode();
+	  }
+	  else if(pvd==0){
 		  GPIOB->ODR=(1U<<1);
+		  GPIOB->ODR&=~(1U<<3);
 	  }
 	  switch(state) {
 	  	  case 1:
@@ -206,7 +240,6 @@ int main(void)
 	  		  }
 	  		  break;
 	  	  case 3:
-	  		  erase_data(Addr_total_pulse);
 	  		  save_data(Addr_total_pulse, total_pulses);
 	  		  save_data(Addr_num, num);
 	  		  save_data(Addr_Ton, (uint32_t)Ton);
@@ -238,7 +271,7 @@ int main(void)
 	  		  Ton=0;
 	  		  Toff=0;
 	  		  total_pulses=0;
-	  		  if(pvd!=1){
+	  		  if(pvd==0){
 	  			  state=5;
 	  		  }
 	  		  else{
@@ -305,7 +338,7 @@ void SystemClock_Config(void)
     Error_Handler();
   }
   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
-  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_SYSCLK;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -321,6 +354,8 @@ void GPIO_LEDS(void){
 	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
+	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
+	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
 }
 
 void PG_init(void){
@@ -364,6 +399,7 @@ char * ptr;
 										Ton=(float)((Period*duty_cycle)/100);
 										Toff=Period-Ton;
 										state=1;
+								  		erase_data(Addr_total_pulse);
 									}
 							}
 							else{
@@ -396,6 +432,7 @@ char * ptr;
 										Period=(float)(1000/freq);
 										Ton=(float)((Period*duty_cycle)/100);
 										Toff=Period-Ton;
+								  		erase_data(Addr_total_pulse);
 										state=2;
 									}
 								}
@@ -408,6 +445,14 @@ char * ptr;
 						}
 				}
 				else if (strcmp(line_buffer, "stop") == 0){
+					state=3;
+				}
+				else if (strcmp(line_buffer, "read") == 0){
+					pvd=0;
+					state=4;
+				}
+				else if (strcmp(line_buffer, "test") == 0){
+					pvd=1;
 					state=3;
 				}
 				else if (strcmp(line_buffer, "cont") == 0){
@@ -428,14 +473,19 @@ char * ptr;
                         flag=0;
 					}
 					else if(flag==2){
-                    	total_pulses=read_data(Addr_total_pulse);
-                        Ton=read_data(Addr_Ton);
-                        Toff=read_data(Addr_Toff);
-                        duty_cycle=read_data(Addr_duty_cycle);
-                        freq=read_data(Addr_freq);
-                        erase_data(Addr_total_pulse);
-                        state=1;
-                        flag=0;
+						if(read_data(Addr_Ton)>0){
+							total_pulses=read_data(Addr_total_pulse);
+							Ton=read_data(Addr_Ton);
+							Toff=read_data(Addr_Toff);
+							duty_cycle=read_data(Addr_duty_cycle);
+							freq=read_data(Addr_freq);
+							erase_data(Addr_total_pulse);
+							state=1;
+						}
+						else{
+							state=0;
+						}
+                      flag=0;
 					}
 				}
 				else {
@@ -500,7 +550,7 @@ void splitString(const char* input_string, char** tokens) {
 }
 void TIM6_IRQHandler(void){
 	TIM6->SR &=~TIM_SR_UIF;
-	if(pvd!=1){
+	if(pvd==0){
 		TIM6_Callback();
 	}
 }

@@ -8,7 +8,6 @@
 "./Core/Src/syscalls.o"
 "./Core/Src/sysmem.o"
 "./Core/Src/system_stm32l0xx.o"
-"./Core/Src/tim.o"
 "./Core/Src/tim6.o"
 "./Core/Src/usart.o"
 "./Core/Startup/startup_stm32l073rztx.o"

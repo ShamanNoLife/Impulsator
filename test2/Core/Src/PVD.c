@@ -7,19 +7,16 @@
 #include  "PVD.h"
 
 void Stop_mode(void){
+	__HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
     HAL_Delay(2000);
-    HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON,PWR_STOPENTRY_WFI);
+    /* Select Standby mode */
+     SET_BIT(PWR->CR, PWR_CR_PDDS);
+
+     /* Set SLEEPDEEP bit of Cortex System Control Register */
+     SET_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+
+     /* This option is used to ensure that store operations are completed */
+   #if defined ( __CC_ARM)
+     __force_stores();
+   #endif
 }
-
-void PVD_init(void) {
-	RCC->APB1ENR |= RCC_APB1ENR_PWREN;
-	PWR_PVDTypeDef sConfigPVD;
-	sConfigPVD.PVDLevel = PWR_PVDLEVEL_6;
-	sConfigPVD.Mode = PWR_PVD_MODE_IT_RISING;
-	HAL_PWR_PVDConfig(&sConfigPVD);
-	HAL_PWR_EnablePVD();
-}
-
-
-
-
