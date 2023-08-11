@@ -1,4 +1,0 @@
-../Core/Src/uart4.c:18:6:UART2_init	1
-../Core/Src/uart4.c:35:6:uart_write	3
-../Core/Src/uart4.c:41:9:uart_read	2
-../Core/Src/uart4.c:46:13:uart_set_baudrate	2

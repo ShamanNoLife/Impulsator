@@ -1,10 +1,26 @@
-07:59:03 **** Incremental Build of configuration Debug for project STAZ ****
+06:54:41 **** Incremental Build of configuration Debug for project STAZ ****
 make -j12 all 
+arm-none-eabi-gcc "../Core/Src/PVD.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/PVD.d" -MT"Core/Src/PVD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/PVD.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:29:
+../Core/Src/main.c: In function 'MENU_USB':
+../Core/Src/main.c:294:94: warning: array subscript has type 'char' [-Wchar-subscripts]
+  294 |                                                                         if(!isdigit(tokens[i][j])){
+      |                                                                                     ~~~~~~~~~^~~
+../Core/Src/main.c:328:94: warning: array subscript has type 'char' [-Wchar-subscripts]
+  328 |                                                                         if(!isdigit(tokens[i][j])){
+      |                                                                                     ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "STAZ.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\STAZ\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STAZ.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STAZ.elf
+ 
 arm-none-eabi-size   STAZ.elf 
+arm-none-eabi-objdump -h -S  STAZ.elf  > "STAZ.list"
    text	   data	    bss	    dec	    hex	filename
-  29560	    128	   2280	  31968	   7ce0	STAZ.elf
+  29588	    128	   2280	  31996	   7cfc	STAZ.elf
 Finished building: default.size.stdout
  
+Finished building: STAZ.list
+ 
 
-07:59:03 Build Finished. 0 errors, 0 warnings. (took 251ms)
+06:54:42 Build Finished. 0 errors, 2 warnings. (took 860ms)
 

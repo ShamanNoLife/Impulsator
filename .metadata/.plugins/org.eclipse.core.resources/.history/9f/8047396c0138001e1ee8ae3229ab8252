@@ -120,7 +120,6 @@ void HAL_PWR_PVDCallback(void){
     	GPIOB->ODR&=~(1U<<1);
 		pvd=1;
 		state=3;
-		save_data(0x0800FFF4, state);
 		//Stop_mode();
     }
 }
