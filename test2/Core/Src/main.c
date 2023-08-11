@@ -118,22 +118,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
  }
 }
 
-//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
-//{
-//   adc_val = HAL_ADC_GetValue(hadc);
-//   buffer= 3.3f * adc_val / 4096.0f;
-//   if(buffer<3.1f){
-//	   		GPIOB->ODR=~(1U<<1);
-//	   		GPIOA->ODR=~(1U<<5);
-//	   		pvd=1;
-//	   		state=3;
-//	   		Stop_mode();
-//   }
-//   else{
-//	   pvd=0;
-//   }
-//}
-
 void TIM6_Callback(void){
 	if(state==1 || state==2){
 		GPIOA->ODR^=(1U<<5);
@@ -153,6 +137,17 @@ void HAL_PWR_PVDCallback(void){
     else{
     	pvd=0;
     }
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+  if(GPIO_Pin == GPIO_PIN_13) {
+	pvd=1;
+	state=3;
+	GPIOB->ODR=~(1U<<1);
+	GPIOA->ODR=~(1U<<5);
+  } else {
+    __NOP();
+  }
 }
 /* USER CODE END 0 */
 
@@ -190,27 +185,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
-
-//  if(HAL_ADCEx_Calibration_Start(&hadc,ADC_SINGLE_ENDED) != HAL_OK)
-//                Error_Handler();
-//  if(HAL_ADC_Start_IT(&hadc) != HAL_OK)
-//                Error_Handler();
-//  if(HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1) != HAL_OK)
-//                Error_Handler();
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
-	  if(pvd==1){
-		  GPIOB->ODR^=(1U<<3);
-		  Stop_mode();
-	  }
-	  else if(pvd==0){
-		  GPIOB->ODR=(1U<<1);
-		  GPIOB->ODR&=~(1U<<3);
-	  }
+	  if(pvd==0){
+		GPIOB->ODR=(1U<<1);
+		GPIOB->ODR&=~(1U<<3);
+		}
 	  switch(state) {
 	  	  case 1:
 	  		  GPIOC->BSRR = ~(1U<<4);
@@ -279,9 +262,8 @@ int main(void)
 	  		  }
 	  		  break;
 	  	  case 5:
-	  		  printf("\n\r");
 	  		  sprintf(line_buffer,"Num:%lu,Total pulse:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",fdata1,fdata2,fdata3,fdata4,fdata5,fdata6);
-	  		  HAL_UART_Transmit(&huart2, (uint8_t*)line_buffer, strlen(line_buffer), 50);
+	  		  HAL_UART_Transmit_IT (&huart2, (uint8_t*)line_buffer, strlen(line_buffer));
 	  		  for(int i;i<strlen(line_buffer);i++){
 	  			  line_buffer[i]='\0';
 	  		  }
@@ -290,10 +272,15 @@ int main(void)
 	  	  default:
 	  		  break;
 	  }
+	if(pvd==1){
+		GPIOB->ODR^=(1U<<3);
+		break;
+	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
+  Stop_mode();
   /* USER CODE END 3 */
 }
 
@@ -450,10 +437,6 @@ char * ptr;
 				else if (strcmp(line_buffer, "read") == 0){
 					pvd=0;
 					state=4;
-				}
-				else if (strcmp(line_buffer, "test") == 0){
-					pvd=1;
-					state=3;
 				}
 				else if (strcmp(line_buffer, "cont") == 0){
 					if(flag==1){
