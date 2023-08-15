@@ -85,9 +85,8 @@ void Stop_mode(void);
 void Start_STATUS_LED(void const * argument);
 void START_IMPULSATOR(void const * argument);
 void MENU_USB(uint8_t data);
-void PG_init(void);
 void TIM6_init(void);
-void GPIO_LEDS(void);
+void GPIO_init(void);
 void save_data(uint32_t Address,uint32_t data1);
 void erase_data(uint32_t Address);
 uint32_t read_data(uint32_t Address);
@@ -163,8 +162,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  PG_init();
-  GPIO_LEDS();
+  GPIO_init();
   TIM6_init();
   /* USER CODE END Init */
 
@@ -186,10 +184,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
-	  if(pvd==0){
-		GPIOB->ODR=(1U<<1);
-		GPIOB->ODR&=~(1U<<3);
-		}
 	  switch(state) {
 	  	  case 1:
 	  		  GPIOC->BSRR = ~(1U<<4);
@@ -269,14 +263,13 @@ int main(void)
 	  		  break;
 	  }
 	if(pvd==1){
-		GPIOB->ODR^=(1U<<3);
-		break;
+		Stop_mode();
 	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
-  Stop_mode();
+
   /* USER CODE END 3 */
 }
 
@@ -330,22 +323,23 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-void GPIO_LEDS(void){
-	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
-	RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+void GPIO_init(void){
+	RCC->IOPENR |= RCC_IOPENR_GPIOBEN|RCC_IOPENR_GPIOAEN|RCC_IOPENR_GPIOCEN;;
 
 	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
+	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
+
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
-	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
+
+	GPIOC -> MODER &= (GPIO_MODER_MODE4_0)|(GPIOC->MODER & ~GPIO_MODER_MODE4);
+
+	GPIOC->BSRR = (1U<<4);
+	GPIOB->ODR = (1U<<1);
 }
 
-void PG_init(void){
-	RCC->IOPENR  |= RCC_IOPENR_GPIOCEN;
-	GPIOC -> MODER = (GPIO_MODER_MODE4_0)|(GPIOC->MODER & ~GPIO_MODER_MODE4);
-	GPIOC->BSRR = (1U<<4);
-}
+
 
 void MENU_USB(uint8_t value){
 int result;
@@ -527,6 +521,7 @@ void splitString(const char* input_string, char** tokens) {
     }
     free(copy_of_input);
 }
+
 void TIM6_IRQHandler(void){
 	TIM6->SR &=~TIM_SR_UIF;
 	if(pvd==0){

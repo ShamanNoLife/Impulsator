@@ -14,6 +14,7 @@ void TIM6_init(void){
 	TIM6->CNT=0;
 	TIM6->CR1= TIM_CR1_CEN;
 	TIM6->DIER|=TIM_DIER_UIE;
+
 	NVIC_EnableIRQ(TIM6_IRQn);
 }
 

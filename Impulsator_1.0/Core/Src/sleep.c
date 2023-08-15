@@ -7,17 +7,16 @@
 #include <sleep.h>
 
 void Stop_mode(void){
-	__HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
-    HAL_Delay(2000);
-    /* Select Standby mode */
-     SET_BIT(PWR->CR, PWR_CR_PDDS);
 
-     /* Set SLEEPDEEP bit of Cortex System Control Register */
-     SET_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+    RCC->APB1ENR |= RCC_APB1ENR_PWREN;
 
-     /* This option is used to ensure that store operations are completed */
-   #if defined ( __CC_ARM)
-     __force_stores();
-   #endif
+    PWR->CR |= PWR_CR_CWUF;
+    PWR->CR |= PWR_CR_ULP;
+    PWR->CR |= PWR_CR_PDDS;
+
+    SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+    SCB->SCR |= SCB_SCR_SLEEPONEXIT_Msk;
+
    __WFI();
+
 }

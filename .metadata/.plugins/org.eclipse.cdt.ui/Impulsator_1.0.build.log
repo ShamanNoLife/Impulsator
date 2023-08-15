@@ -1,0 +1,36 @@
+18:50:13 **** Build of configuration Debug for project Impulsator_1.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pulse_gen.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pulse_gen.d" -MT"Core/Src/pulse_gen.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pulse_gen.o"
+arm-none-eabi-gcc "../Core/Src/sleep.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sleep.d" -MT"Core/Src/sleep.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sleep.o"
+arm-none-eabi-gcc "../Core/Src/tim6.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim6.d" -MT"Core/Src/tim6.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim6.o"
+../Core/Src/flash.c: In function 'erase_data':
+../Core/Src/flash.c:31:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   31 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:23:6: note: declared here
+   23 | void erase_data(uint32_t Address){
+      |      ^~~~~~~~~~
+In file included from ../Core/Src/main.c:30:
+../Core/Src/main.c: In function 'MENU_USB':
+../Core/Src/main.c:358:94: warning: array subscript has type 'char' [-Wchar-subscripts]
+  358 |                                                                         if(!isdigit(tokens[i][j])){
+      |                                                                                     ~~~~~~~~~^~~
+../Core/Src/main.c:391:94: warning: array subscript has type 'char' [-Wchar-subscripts]
+  391 |                                                                         if(!isdigit(tokens[i][j])){
+      |                                                                                     ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "Impulsator_1.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_1.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_1.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_1.0.elf
+ 
+arm-none-eabi-size   Impulsator_1.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_1.0.elf  > "Impulsator_1.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  29004	    408	   2232	  31644	   7b9c	Impulsator_1.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_1.0.list
+ 
+
+18:50:14 Build Finished. 0 errors, 3 warnings. (took 982ms)
+
