@@ -118,7 +118,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 }
 
 void TIM6_Callback(void){
-	if(state==1 || state==2){
+	if(1){
 		GPIOB->ODR^=(1U<<5);
 	}
 	else{
@@ -194,6 +194,7 @@ int main(void)
 		  GPIOB->ODR|=(1U<<3);
 		  GPIOA->BSRR = (1U<<6);
 	  }
+
 	  switch(state) {
 	  	  case 1:
 	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);

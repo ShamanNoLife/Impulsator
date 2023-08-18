@@ -9684,3 +9684,130 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.internal.p2.r
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2023-08-18 19:57:52.446 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-18 19:58:14.370
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-18 19:58:14.381
+!MESSAGE Log4j2 initialized with config file C:\Users\Dell\OneDrive\Pulpit\STAZ\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-18 19:58:28.109
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:08:38.836
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:08:38.836
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:08:38.836
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:08:38.836
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:08:39.171
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:08:39.171
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:08:39.171
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:08:39.172
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-18 20:08:53.763
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:13:30.055
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:13:30.055
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:13:30.055
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:13:30.055
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:13:30.359
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:13:30.359
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:13:30.359
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:13:30.360
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-18 20:13:36.453
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:15:49.913
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:15:49.913
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:15:49.913
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:15:49.913
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:15:56.827
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:15:56.827
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:15:56.827
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:15:56.827
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:16:02.811
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:16:02.811
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:16:02.811
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:16:02.811
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:16:03.037
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:16:03.037
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:16:03.037
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:16:03.038
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-18 20:16:08.441
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:17:05.519
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:17:05.519
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:17:05.519
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:17:05.519
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-18 20:17:05.801
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-18 20:17:05.801
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-18 20:17:05.801
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-18 20:17:05.802
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-18 20:17:11.806
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s

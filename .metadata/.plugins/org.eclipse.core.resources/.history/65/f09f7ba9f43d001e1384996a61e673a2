@@ -194,6 +194,7 @@ int main(void)
 		  GPIOB->ODR|=(1U<<3);
 		  GPIOA->BSRR = (1U<<6);
 	  }
+
 	  switch(state) {
 	  	  case 1:
 	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);

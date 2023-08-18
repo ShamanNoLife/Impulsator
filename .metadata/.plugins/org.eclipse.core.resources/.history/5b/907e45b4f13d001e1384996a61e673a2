@@ -118,11 +118,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 }
 
 void TIM6_Callback(void){
-	if(state==1 || state==2){
-		GPIOB->ODR^=(1U<<5);
+
+	if(1){
+		GPIOA->ODR^=(1U<<10);
 	}
 	else{
-		GPIOB->ODR=(1U<<5);
+		GPIOA->ODR=(1U<<10);
 	}
 }
 
@@ -131,6 +132,7 @@ void HAL_PWR_PVDCallback(void){
 		pvd=1;
 		state=3;
    		GPIOB->ODR=~(1U<<1);
+   		//GPIOA->ODR=~(1U<<5);
    		save_data_1(Addr_num+8, 1);
     }
     else{
@@ -194,6 +196,7 @@ int main(void)
 		  GPIOB->ODR|=(1U<<3);
 		  GPIOA->BSRR = (1U<<6);
 	  }
+
 	  switch(state) {
 	  	  case 1:
 	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
@@ -349,13 +352,10 @@ void GPIO_LEDS(void){
 	RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
 
 	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
-	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
-
-	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
-
+	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
 }
 
 void PG_init(void){
@@ -379,6 +379,7 @@ char * ptr;
 					if (strncmp(line_buffer, "run",3) == 0) {
 						if(flag==1 || flag==2){
 							printf("\n\rA program is working, to enter new parameters use stop first\n\r");
+
 						}
 						else{
 							splitString(line_buffer, tokens);
@@ -504,7 +505,7 @@ char * ptr;
 				}
 				else {
 					printf(error);
-					printf(menu);
+					printf( menu);
 				}
 				printf("\n\r");
 				for(int i;i<line_length;i++){
@@ -562,7 +563,6 @@ void splitString(const char* input_string, char** tokens) {
     }
     free(copy_of_input);
 }
-
 void TIM6_IRQHandler(void){
 	TIM6->SR &=~TIM_SR_UIF;
 	if(pvd==0){
