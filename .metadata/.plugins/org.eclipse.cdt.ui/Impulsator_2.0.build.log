@@ -1,17 +1,10 @@
-20:17:05 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+20:50:51 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Impulsator_2.0.elf
- 
 arm-none-eabi-size   Impulsator_2.0.elf 
-arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
    text	   data	    bss	    dec	    hex	filename
-  29444	    532	   2276	  32252	   7dfc	Impulsator_2.0.elf
+  29464	    532	   2276	  32272	   7e10	Impulsator_2.0.elf
 Finished building: default.size.stdout
  
-Finished building: Impulsator_2.0.list
- 
 
-20:17:06 Build Finished. 0 errors, 0 warnings. (took 918ms)
+20:50:51 Build Finished. 0 errors, 0 warnings. (took 257ms)
 

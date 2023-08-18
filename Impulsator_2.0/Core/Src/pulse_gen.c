@@ -7,13 +7,6 @@
  */
 #include <pulse_gen.h>
 
-#define LOAD_VAL 			 2097
-#define Systick_EN 			(1U<<0)
-#define Systick_CLKS 		(1U<<2)
-#define SysTick_COUNTFLAG 	(1U<<16)
-/*PC*/
-
-
 uint8_t send_pulse_v1(uint8_t freg, uint8_t duty_cycle){
 	uint8_t total_pulses=0;
 	float Ton,Toff,Period;

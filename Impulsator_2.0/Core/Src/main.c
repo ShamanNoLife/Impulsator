@@ -44,6 +44,7 @@
 #define LINE_MAX_LENGTH 120
 #define MAX_TOKENS 4
 #define IF_INFINITY 4
+#define PVD 8
 #define SIZE_OF_VARIABLE 10
 /* USER CODE END PD */
 
@@ -108,7 +109,6 @@ int __io_putchar(int ch)
     return 1;
 }
 
-
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
   if (huart == &huart2) {
 	  MENU_USB(value);
@@ -128,22 +128,26 @@ void TIM6_Callback(void){
 
 void HAL_PWR_PVDCallback(void){
     if (pvd==0) {
-		pvd=1;
-		state=3;
-   		GPIOB->ODR=~(1U<<1);
-   		save_data_1(Addr_num+8, 1);
+    	HAL_Delay(500);
+    	if (pvd==0){
+			pvd=1;
+			state=3;
+			GPIOB->ODR=~(1U<<1);
+			save_data_1(Addr_num+PVD, 1);
+    	}
     }
     else{
     	pvd=0;
     }
 }
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
   if(GPIO_Pin == GPIO_PIN_13) {
 	pvd=1;
 	state=3;
 	GPIOB->ODR=~(1U<<1);
 	GPIOA->ODR=~(1U<<5);
-	save_data_1(Addr_num+8, 1);
+	save_data_1(Addr_num+PVD, 1);
   } else {
     __NOP();
   }
@@ -194,7 +198,7 @@ int main(void)
 		  GPIOB->ODR|=(1U<<3);
 		  GPIOA->BSRR = (1U<<6);
 	  }
-	  switch(state) {
+	  switch(state){
 	  	  case 1:
 	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
 	  		  while((GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
@@ -283,7 +287,7 @@ int main(void)
 	  	  default:
 	  		  break;
 	  	  }
-	  if((read_data((Addr_num+8))==1) && pvd==1 && save==1){
+	  if((read_data((Addr_num+PVD))==1) && pvd==1 && save==1){
 		 STANDBY();
 	  }
   }
@@ -355,7 +359,6 @@ void GPIO_LEDS(void){
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
-
 }
 
 void PG_init(void){
@@ -371,8 +374,8 @@ void PG_init(void){
 }
 
 void MENU_USB(uint8_t value){
-int result;
-char * ptr;
+	int result;
+	char * ptr;
  		if (value == '\r' || value == '\n') {
 			if (line_length > 0) {
 				line_buffer[line_length] = '\0';
@@ -459,7 +462,7 @@ char * ptr;
 					state=3;
 				}
 				else if (strcmp(line_buffer, "read") == 0){
-					if(read_data(Addr_num+8)==1){
+					if(read_data(Addr_num+PVD)==1){
 						pvd=0;
 						state=4;
 					}
