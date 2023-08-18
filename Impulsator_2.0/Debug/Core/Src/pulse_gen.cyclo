@@ -1,0 +1,2 @@
+../Core/Src/pulse_gen.c:17:9:send_pulse_v1	3
+../Core/Src/pulse_gen.c:35:10:send_pulse_v2	4

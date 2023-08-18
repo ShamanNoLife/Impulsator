@@ -1,0 +1,14 @@
+../Core/Src/main.c:105:5:__io_putchar	1
+../Core/Src/main.c:112:6:HAL_UART_RxCpltCallback	2
+../Core/Src/main.c:120:6:TIM6_Callback	1
+../Core/Src/main.c:130:6:HAL_PWR_PVDCallback	2
+../Core/Src/main.c:142:6:HAL_GPIO_EXTI_Callback	2
+../Core/Src/main.c:159:5:main	31
+../Core/Src/main.c:304:6:SystemClock_Config	4
+../Core/Src/main.c:350:6:GPIO_LEDS	1
+../Core/Src/main.c:361:6:PG_init	1
+../Core/Src/main.c:373:6:MENU_USB	44
+../Core/Src/main.c:537:10:ASCII_TO_uint8_t	4
+../Core/Src/main.c:553:6:splitString	3
+../Core/Src/main.c:566:6:TIM6_DAC_IRQHandler	2
+../Core/Src/main.c:578:6:Error_Handler	1
