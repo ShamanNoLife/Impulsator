@@ -28,10 +28,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <standby.h>
+#include <stdbool.h>
+#include "standby.h"
 #include "tim6.h"
 #include "flash.h"
-//#include "PVD.H"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,11 @@
 #define IF_INFINITY 4
 #define PVD 8
 #define SIZE_OF_VARIABLE 10
+#define PULSE_PORT GPIOA
+#define POWER_LED_PORT  GPIOB
+#define POWER_LED_PIN  (1U<<3)
+#define STATUS_LED_PORT GPIOB
+#define STATUS_LED_PIN (1U<<1)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,21 +61,55 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint32_t Addr_num=0x0800FFA0;
-uint32_t Addr_total_pulse=0x0800FFB0;
-uint32_t Addr_Ton=0x0800FFC0;
-uint32_t Addr_Toff=0x0800FFD0;
-uint32_t Addr_freq=0x0800FFE0;
-uint32_t Addr_duty_cycle=0x0800FFF0;
 uint8_t value;
-uint32_t num,data,freq,duty_cycle,fdata1,fdata2,fdata3,fdata4,fdata5,fdata6,total_pulses=0;
-float Ton,Toff,Period;
+
+enum STATE_OF_PROGRAM{
+	RUNNING_INFI,
+	RUNNING_N_TIMES,
+	SAVE_DATA,
+	READ_DATA,
+	DISPLAY_DATA,
+	DONE
+}state;
+
+typedef struct {
+	uint32_t Adrr_numer_of_pulses;
+	uint32_t Adrr_total_pulse_generated;
+	uint32_t Adrr_Ton;
+	uint32_t Adrr_Toff;
+	uint32_t Adrr_freq;
+	uint32_t Adrr_duty_cycle;
+} Adrress;
+
+struct imp_config{
+	uint32_t freq;
+	uint32_t duty_cycle;
+	uint32_t Ton;
+	uint32_t Toff;
+	uint32_t Period;
+};
+
+typedef struct {
+	uint32_t numer_of_pulses;
+	uint32_t total_pulse_generated;
+	struct imp_config config;
+} running_state;
+
+typedef struct{
+	uint32_t if_infinity;
+	uint32_t pvd;
+	uint32_t save;
+}flag;
+
+flag pulse_flag;
+Adrress Adrr_flash;
+running_state pulse_para;
+
+uint32_t* ptr_to_data_struct = (uint32_t*)&pulse_para;
+
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
 static uint32_t line_length;
-static int flag=0;
-static int state;
-static int save,pvd=1;
 static char menu[]="\n\r---------------HOW TO USE---------------\n\rrun: Start a program\n\rstop: Stop a program\n\r"
 				   "read: To read value (only if usb cable was off)\n\rcont: To continue\n\r";
 static char error[]="\n\rWrong key\n\r";
@@ -91,10 +130,9 @@ void MENU_USB(uint8_t data);
 void PG_init(void);
 void TIM6_init(void);
 void GPIO_LEDS(void);
-void save_data_1(uint32_t Adrr,uint32_t data);
-void save_data_2(uint32_t Adrr, uint32_t data1,uint32_t data2,uint32_t data3,uint32_t data4,uint32_t data5,uint32_t data6);
-void erase_data(uint32_t Address);
-uint32_t read_data(uint32_t Address);
+void save_data_2(uint32_t Adrr,uint32_t* data);
+void erase_data(uint32_t Adrr);
+uint32_t read_data(uint32_t Adrress);
 uint32_t ASCII_TO_uint8_t(const char *table);
 void splitString(const char* input_string, char** tokens);
 void TIM6_IRQHandler(void);
@@ -118,40 +156,26 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 }
 
 void TIM6_Callback(void){
-	if(state==1 || state==2){
-		GPIOB->ODR^=(1U<<5);
+	if(state==RUNNING_INFI|| state==RUNNING_N_TIMES){
+		STATUS_LED_PORT->ODR^=STATUS_LED_PIN;
 	}
 	else{
-		GPIOB->ODR=(1U<<5);
+		STATUS_LED_PORT->ODR=STATUS_LED_PIN;
 	}
 }
 
 void HAL_PWR_PVDCallback(void){
-    if (pvd==0) {
-    	HAL_Delay(500);
-    	if (pvd==0){
-			pvd=1;
-			state=3;
-			GPIOB->ODR=~(1U<<1);
-			save_data_1(Addr_num+PVD, 1);
-    	}
+	static bool was_executed = false;
+    if (was_executed) {
+    	pulse_flag.pvd=1;
+		POWER_LED_PORT->ODR=~POWER_LED_PIN;
     }
     else{
-    	pvd=0;
+    	was_executed=true;
+    	pulse_flag.pvd=0;
     }
 }
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-  if(GPIO_Pin == GPIO_PIN_13) {
-	pvd=1;
-	state=3;
-	GPIOB->ODR=~(1U<<1);
-	GPIOA->ODR=~(1U<<5);
-	save_data_1(Addr_num+PVD, 1);
-  } else {
-    __NOP();
-  }
-}
 /* USER CODE END 0 */
 
 /**
@@ -161,7 +185,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -189,106 +212,102 @@ int main(void)
   /* USER CODE BEGIN 2 */
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
+
+  Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
+  Adrr_flash.Adrr_total_pulse_generated=0x0800FFB0;
+  Adrr_flash.Adrr_Ton=0x0800FFC0;
+  Adrr_flash.Adrr_Toff=0x0800FFD0;
+  Adrr_flash.Adrr_freq=0x0800FFE0;
+  Adrr_flash.Adrr_duty_cycle=0x0800FFF0;
+  state=DONE;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
-	  if(pvd==0){
-		  GPIOB->ODR|=(1U<<3);
-		  GPIOA->BSRR = (1U<<6);
+	  if(pulse_flag.pvd==0){
+		  POWER_LED_PORT->ODR|=POWER_LED_PIN ;
 	  }
+
 	  switch(state){
-	  	  case 1:
+	  	  case RUNNING_INFI:
 	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
 	  		  while((GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)Ton);
+	  		  HAL_Delay((uint32_t)pulse_para.config.Ton);
 	  		  GPIOA->BSRR |= (1U<<0) | (1U<<1) | (1U<<6);
 	  		  while(!(GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)Toff);
-	  		  total_pulses++;
-	  		  flag=2;
+	  		  HAL_Delay((uint32_t)pulse_para.config.Toff);
+	  		  (pulse_para.total_pulse_generated)++;
+	  		  pulse_flag.if_infinity=1;
 	  		  break;
-	  	  case 2:
+	  	  case RUNNING_N_TIMES:
 	  		  GPIOA->BSRR &= ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
 	  		  GPIOA->BSRR |= (1U<<16) | (1U<<17) | (1U<<22);
 	  		  while((GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)Ton);
+	  		  HAL_Delay((uint32_t)pulse_para.config.Ton);
 	  		  GPIOA->BSRR |= (1U<<0) | (1U<<1) | (1U<<6);
 	  		  while(!(GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)Toff);
-	  		  total_pulses++;
-	  		  num--;
-	  		  if(num>0 && state==2){
-	  			  state=2;
-	  			  flag=1;
+	  		  HAL_Delay((uint32_t)pulse_para.config.Toff);
+	  		  (pulse_para.total_pulse_generated)++;
+	  		  (pulse_para.numer_of_pulses)--;
+	  		  if(pulse_para.numer_of_pulses>0 && state==RUNNING_N_TIMES){
+	  			state=RUNNING_N_TIMES;
+	  			pulse_flag.if_infinity=0;
 	  		  }
 	  		  else{
-	  			  state=3;
+	  			state=SAVE_DATA;
 	  		  }
 	  		  break;
-	  	  case 3:
-	  		  if(flag==2){
-	  			num=1;
-	  			save_data_2(Addr_num, 0, total_pulses, (uint32_t)Ton, (uint32_t)Toff, freq, duty_cycle);
-	  			save_data_1(Addr_num+IF_INFINITY,num);
+	  	  case SAVE_DATA:
+	  		  if(pulse_flag.if_infinity==1){
+	  			pulse_para.numer_of_pulses=1;
+	  			save_data_2(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct);
 	  		  }
-	  		  else if(flag==1){
-	  			save_data_2(Addr_num, num, total_pulses, (uint32_t)Ton, (uint32_t)Toff, freq, duty_cycle);
+	  		  else if(pulse_flag.if_infinity==0){
+	  			save_data_2(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct);
 	  		  }
-	  		  save=1;
-	  		  state=4;
-	  		  break;
-	  	  case 4:
-	  		  if(flag==1){
-	  			  fdata1=read_data(Addr_num);
-	  			  fdata2=read_data(Addr_total_pulse);
-	  			  fdata3=read_data(Addr_Ton);
-	  			  fdata4=read_data(Addr_Toff);
-	  			  fdata5=read_data(Addr_freq);
-	  			  fdata6=read_data(Addr_duty_cycle);
+	  		  pulse_flag.save=1;
+	  		  if(pulse_flag.pvd==0){
+	  			  state=READ_DATA;
 	  		  }
 	  		  else{
-	  			  fdata1=read_data(Addr_num);
-	  			  fdata2=read_data(Addr_total_pulse);
-	  			  fdata3=read_data(Addr_Ton);
-	  			  fdata4=read_data(Addr_Toff);
-	  			  fdata5=read_data(Addr_freq);
-	  			  fdata6=read_data(Addr_duty_cycle);
+	  			  state=DONE;
 	  		  }
-	  		  num=0;
-	  		  freq=0;
-	  		  duty_cycle=0;
-	  		  Ton=0;
-	  		  Toff=0;
-	  		  total_pulses=0;
-	  		  if(pvd==0){
-	  			  state=5;
+
+	  		  break;
+	  	  case READ_DATA:
+	  		  if(pulse_flag.if_infinity==1){
+
 	  		  }
 	  		  else{
-	  			  state=0;
+
 	  		  }
-	  		  break;
-	  	  case 5:
+	  		state=DISPLAY_DATA;
+	  		break;
+	  	  case DISPLAY_DATA:
 	  		  printf("\n\r");
-	  		  if(read_data(Addr_num+IF_INFINITY)==1){
-	  			  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",fdata2,fdata3,fdata4,fdata5,fdata6);
+	  		  if(read_data(Adrr_flash.Adrr_numer_of_pulses+IF_INFINITY)==1){
+	  			 //sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",);
 	  		  }
 	  		  else{
-	  			  sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",fdata1,fdata2,fdata3,fdata4,fdata5,fdata6);
+	  			  //sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",);
 	  		  }
 	  		  HAL_UART_Transmit(&huart2, (uint8_t*)line_buffer, strlen(line_buffer), 50);
 	  		  for(int i;i<strlen(line_buffer);i++){
 	  			  line_buffer[i]='\0';
 	  		  }
-	  		  flag=0;
-	  		  state=0;
+	  		  state=DONE;
 	  		  break;
-	  	  default:
+	  	  case DONE:
 	  		  break;
 	  	  }
-	  if((read_data((Addr_num+PVD))==1) && pvd==1 && save==1){
-		 STANDBY();
+	  if(pulse_flag.pvd==1){
+		 if(pulse_flag.save==1){
+			 STANDBY();
+		 }
+		 else{
+			 state=SAVE_DATA;
+		 }
 	  }
   }
     /* USER CODE END WHILE */
@@ -364,13 +383,13 @@ void GPIO_LEDS(void){
 void PG_init(void){
 	RCC->IOPENR  |= RCC_IOPENR_GPIOAEN;
 
-	GPIOA -> MODER = (GPIO_MODER_MODE0_0)|(GPIOA->MODER & ~GPIO_MODER_MODE0);
-	GPIOA -> MODER = (GPIO_MODER_MODE1_0)|(GPIOA->MODER & ~GPIO_MODER_MODE1);
-	GPIOA -> MODER = (GPIO_MODER_MODE6_0)|(GPIOA->MODER & ~GPIO_MODER_MODE6);
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE0_0)|(GPIOA->MODER & ~GPIO_MODER_MODE0);
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE1_0)|(GPIOA->MODER & ~GPIO_MODER_MODE1);
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE6_0)|(GPIOA->MODER & ~GPIO_MODER_MODE6);
 
-	GPIOA-> BSRR |= (1U<<0);
-	GPIOA-> BSRR |= (1U<<1);
-	GPIOA-> BSRR |= (1U<<6);
+	PULSE_PORT-> BSRR |= (1U<<0);
+	PULSE_PORT-> BSRR |= (1U<<1);
+	PULSE_PORT-> BSRR |= (1U<<6);
 }
 
 void MENU_USB(uint8_t value){
@@ -380,13 +399,13 @@ void MENU_USB(uint8_t value){
 			if (line_length > 0) {
 				line_buffer[line_length] = '\0';
 					if (strncmp(line_buffer, "run",3) == 0) {
-						if(flag==1 || flag==2){
+						if(pulse_flag.if_infinity==1 || pulse_flag.if_infinity==2){
 							printf("\n\rA program is working, to enter new parameters use stop first\n\r");
 						}
 						else{
 							splitString(line_buffer, tokens);
 							ptr=strpbrk(tokens[1], "oo");
-							if((!(ptr==NULL)) && state!=2){
+							if((!(ptr==NULL)) && state!=RUNNING_N_TIMES){
 								for(int i=2;i<MAX_TOKENS;i++){
 									result=1;
 									for(int j=0;j<strlen(tokens[i]);j++){
@@ -399,27 +418,27 @@ void MENU_USB(uint8_t value){
 									}
 								}
 								if(result!=0){
-										freq=ASCII_TO_uint8_t(tokens[2]);
-										duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-										if(freq==0 || duty_cycle==0){
+									pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+									pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+										if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
 											printf(error_with_run);
 										}
-										else if(duty_cycle>=100 || duty_cycle==0){
+										else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
 											printf(error_with_duty_cycle);
 										}
 										else{
-											Period=(float)(1000/freq);
-											Ton=(float)((Period*duty_cycle)/100);
-											Toff=Period-Ton;
-											state=1;
-											erase_data(Addr_total_pulse);
+											pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+											pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+											pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+											state=RUNNING_INFI;
+											erase_data(Adrr_flash.Adrr_numer_of_pulses);
 										}
 								}
 								else{
 									printf(error_with_run);
 								}
 							}
-							else if (ptr==NULL && state!=1){
+							else if (ptr==NULL && state!=RUNNING_INFI){
 								for(int i=1;i<MAX_TOKENS;i++){
 									result=1;
 									for(int j=0;j<strlen(tokens[i]);j++){
@@ -432,21 +451,21 @@ void MENU_USB(uint8_t value){
 									}
 								}
 									if(result!=0){
-										num=ASCII_TO_uint8_t(tokens[1]);
-										freq=ASCII_TO_uint8_t(tokens[2]);
-										duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-										if(num==0 || freq==0 || duty_cycle==0 ){
+										pulse_para.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
+										pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+										pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+										if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
 											printf(error_with_run);
 										}
-										else if(duty_cycle>=100){
+										else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
 											printf(error_with_duty_cycle);
 										}
 										else{
-											Period=(float)(1000/freq);
-											Ton=(float)((Period*duty_cycle)/100);
-											Toff=Period-Ton;
-											erase_data(Addr_total_pulse);
-											state=2;
+											pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+											pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+											pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+											erase_data(Adrr_flash.Adrr_numer_of_pulses);
+											state=RUNNING_N_TIMES;
 										}
 									}
 									else{
@@ -459,50 +478,48 @@ void MENU_USB(uint8_t value){
 						}
 				}
 				else if (strcmp(line_buffer, "stop") == 0){
-					state=3;
+					state=2;
 				}
 				else if (strcmp(line_buffer, "read") == 0){
-					if(read_data(Addr_num+PVD)==1){
-						pvd=0;
-						state=4;
+					if(read_data(Adrr_flash.Adrr_numer_of_pulses+PVD)==1){
+						pulse_flag.pvd=0;
+						state=READ_DATA;
 					}
 					else{
-						printf("\n\rFailure didn't occur\n\r");
+						printf("\n\rPower lose didn't occur\n\r");
 					}
 				}
 				else if (strcmp(line_buffer, "cont") == 0){
 					int i=0;
-					i=read_data(Addr_num+IF_INFINITY);
-					if(flag==1 || i==0){
-                    	num=read_data(Addr_num);
-                    	if(num!=0){
-							total_pulses=read_data(Addr_total_pulse);
-							Ton=read_data(Addr_Ton);
-							Toff=read_data(Addr_Toff);
-							duty_cycle=read_data(Addr_duty_cycle);
-							freq=read_data(Addr_freq);
-							erase_data(Addr_total_pulse);
-							state=2;
+					i=read_data(Adrr_flash.Adrr_numer_of_pulses+IF_INFINITY);
+					if(pulse_flag.if_infinity==0 || i==0){
+                    	pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
+                    	if(pulse_para.numer_of_pulses!=0){
+							pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
+							pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
+							pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
+							pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
+							pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
+							erase_data(Adrr_flash.Adrr_numer_of_pulses);
+							state=RUNNING_N_TIMES;
                     	}
                     	else{
-                    		state=0;
+                    		state=DONE;
                     	}
-                        flag=0;
 					}
-					else if(flag==2 || i==1){
-						if(read_data(Addr_Ton)>0){
-							total_pulses=read_data(Addr_total_pulse);
-							Ton=read_data(Addr_Ton);
-							Toff=read_data(Addr_Toff);
-							duty_cycle=read_data(Addr_duty_cycle);
-							freq=read_data(Addr_freq);
-							erase_data(Addr_total_pulse);
-							state=1;
+					else if(pulse_flag.if_infinity==1 || i==1){
+						if(read_data(Adrr_flash.Adrr_numer_of_pulses)>0){
+							pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
+							pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
+							pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
+							pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
+							pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
+							erase_data(Adrr_flash.Adrr_numer_of_pulses);
+							state=RUNNING_INFI;
 						}
 						else{
-							state=0;
+							state=DONE;
 						}
-                      flag=0;
 					}
 				}
 				else {
@@ -568,7 +585,7 @@ void splitString(const char* input_string, char** tokens) {
 
 void TIM6_IRQHandler(void){
 	TIM6->SR &=~TIM_SR_UIF;
-	if(pvd==0){
+	if(pulse_flag.pvd==0){
 		TIM6_Callback();
 	}
 }
