@@ -47,10 +47,12 @@
 #define PVD 8
 #define SIZE_OF_VARIABLE 10
 #define PULSE_PORT GPIOA
+#define PULSE_LOW ~(1U<<0) & ~(1U<<1) & ~(1U<<6)
+#define PULSE_HIGH (1U<<0) | (1U<<1) | (1U<<6)
 #define POWER_LED_PORT  GPIOB
 #define POWER_LED_PIN  (1U<<3)
 #define STATUS_LED_PORT GPIOB
-#define STATUS_LED_PIN (1U<<1)
+#define STATUS_LED_PIN (1U<<5)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -61,8 +63,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t value;
-
 enum STATE_OF_PROGRAM{
 	RUNNING_INFI,
 	RUNNING_N_TIMES,
@@ -97,6 +97,7 @@ typedef struct {
 
 typedef struct{
 	uint32_t if_infinity;
+	uint32_t if_running;
 	uint32_t pvd;
 	uint32_t save;
 }flag;
@@ -106,6 +107,7 @@ Adrress Adrr_flash;
 running_state pulse_para;
 
 uint32_t* ptr_to_data_struct = (uint32_t*)&pulse_para;
+uint8_t value;
 
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
@@ -124,12 +126,14 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 /* USER CODE BEGIN PFP */
 void STANDBY(void);
-void Start_STATUS_LED(void const * argument);
-void START_IMPULSATOR(void const * argument);
 void MENU_USB(uint8_t data);
+void display_menu(char table);
 void PG_init(void);
 void TIM6_init(void);
 void GPIO_LEDS(void);
+void generate_pulse(void);
+void read(void);
+void display(void);
 void save_data_2(uint32_t Adrr,uint32_t* data);
 void erase_data(uint32_t Adrr);
 uint32_t read_data(uint32_t Adrress);
@@ -172,9 +176,10 @@ void HAL_PWR_PVDCallback(void){
     }
     else{
     	was_executed=true;
-    	pulse_flag.pvd=0;
     }
 }
+
+
 
 /* USER CODE END 0 */
 
@@ -185,6 +190,13 @@ void HAL_PWR_PVDCallback(void){
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
+	Adrr_flash.Adrr_total_pulse_generated=0x0800FFA4;
+	Adrr_flash.Adrr_Ton=0x0800FFB0;
+	Adrr_flash.Adrr_Toff=0x0800FFB4;
+	Adrr_flash.Adrr_freq=0x0800FFA8;
+	Adrr_flash.Adrr_duty_cycle=0x0800FFAC;
+	state=DONE;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -213,13 +225,6 @@ int main(void)
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
 
-  Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
-  Adrr_flash.Adrr_total_pulse_generated=0x0800FFB0;
-  Adrr_flash.Adrr_Ton=0x0800FFC0;
-  Adrr_flash.Adrr_Toff=0x0800FFD0;
-  Adrr_flash.Adrr_freq=0x0800FFE0;
-  Adrr_flash.Adrr_duty_cycle=0x0800FFF0;
-  state=DONE;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -231,82 +236,55 @@ int main(void)
 
 	  switch(state){
 	  	  case RUNNING_INFI:
-	  		  GPIOA->BSRR = ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
-	  		  while((GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)pulse_para.config.Ton);
-	  		  GPIOA->BSRR |= (1U<<0) | (1U<<1) | (1U<<6);
-	  		  while(!(GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)pulse_para.config.Toff);
-	  		  (pulse_para.total_pulse_generated)++;
+	  		  generate_pulse();
+	  		  pulse_flag.if_running=1;
 	  		  pulse_flag.if_infinity=1;
 	  		  break;
 	  	  case RUNNING_N_TIMES:
-	  		  GPIOA->BSRR &= ~(1U<<0) & ~(1U<<1) & ~(1U<<6);
-	  		  GPIOA->BSRR |= (1U<<16) | (1U<<17) | (1U<<22);
-	  		  while((GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)pulse_para.config.Ton);
-	  		  GPIOA->BSRR |= (1U<<0) | (1U<<1) | (1U<<6);
-	  		  while(!(GPIOA->ODR & GPIO_ODR_OD0)&&(GPIOA->ODR & GPIO_ODR_OD1)&&(GPIOA->ODR & GPIO_ODR_OD6)){}
-	  		  HAL_Delay((uint32_t)pulse_para.config.Toff);
-	  		  (pulse_para.total_pulse_generated)++;
+	  		  generate_pulse();
 	  		  (pulse_para.numer_of_pulses)--;
-	  		  if(pulse_para.numer_of_pulses>0 && state==RUNNING_N_TIMES){
+	  		 if(pulse_para.numer_of_pulses>0 && pulse_flag.if_running==1){
 	  			state=RUNNING_N_TIMES;
 	  			pulse_flag.if_infinity=0;
+	  			pulse_flag.if_running=1;
 	  		  }
-	  		  else{
+	  		 else{
 	  			state=SAVE_DATA;
 	  		  }
-	  		  break;
+	  		 break;
 	  	  case SAVE_DATA:
-	  		  if(pulse_flag.if_infinity==1){
+	  		 pulse_flag.if_running=0;
+	  		 if(pulse_flag.if_infinity==1){
 	  			pulse_para.numer_of_pulses=1;
 	  			save_data_2(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct);
 	  		  }
-	  		  else if(pulse_flag.if_infinity==0){
+	  		 else if(pulse_flag.if_infinity==0){
 	  			save_data_2(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct);
 	  		  }
 	  		  pulse_flag.save=1;
-	  		  if(pulse_flag.pvd==0){
+	  		 if(pulse_flag.pvd==0){
 	  			  state=READ_DATA;
 	  		  }
-	  		  else{
+	  		 else{
 	  			  state=DONE;
 	  		  }
-
-	  		  break;
+	  		break;
 	  	  case READ_DATA:
-	  		  if(pulse_flag.if_infinity==1){
-
-	  		  }
-	  		  else{
-
-	  		  }
+	  		read();
 	  		state=DISPLAY_DATA;
 	  		break;
 	  	  case DISPLAY_DATA:
-	  		  printf("\n\r");
-	  		  if(read_data(Adrr_flash.Adrr_numer_of_pulses+IF_INFINITY)==1){
-	  			 //sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",);
-	  		  }
-	  		  else{
-	  			  //sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",);
-	  		  }
-	  		  HAL_UART_Transmit(&huart2, (uint8_t*)line_buffer, strlen(line_buffer), 50);
-	  		  for(int i;i<strlen(line_buffer);i++){
-	  			  line_buffer[i]='\0';
-	  		  }
-	  		  state=DONE;
-	  		  break;
+	  		display();
+	  		state=DONE;
+	  		break;
 	  	  case DONE:
-	  		  break;
+	  		break;
 	  	  }
 	  if(pulse_flag.pvd==1){
+		 pulse_flag.if_running=0;
+		 state=SAVE_DATA;
 		 if(pulse_flag.save==1){
 			 STANDBY();
-		 }
-		 else{
-			 state=SAVE_DATA;
 		 }
 	  }
   }
@@ -369,10 +347,6 @@ void SystemClock_Config(void)
 
 void GPIO_LEDS(void){
 	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
-	RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
-
-	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
-	GPIOA->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE10)) | (GPIO_MODER_MODE10_0));
 
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
 	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
@@ -393,155 +367,14 @@ void PG_init(void){
 }
 
 void MENU_USB(uint8_t value){
-	int result;
-	char * ptr;
  		if (value == '\r' || value == '\n') {
-			if (line_length > 0) {
-				line_buffer[line_length] = '\0';
-					if (strncmp(line_buffer, "run",3) == 0) {
-						if(pulse_flag.if_infinity==1 || pulse_flag.if_infinity==2){
-							printf("\n\rA program is working, to enter new parameters use stop first\n\r");
-						}
-						else{
-							splitString(line_buffer, tokens);
-							ptr=strpbrk(tokens[1], "oo");
-							if((!(ptr==NULL)) && state!=RUNNING_N_TIMES){
-								for(int i=2;i<MAX_TOKENS;i++){
-									result=1;
-									for(int j=0;j<strlen(tokens[i]);j++){
-										if(!isdigit((unsigned char)tokens[i][j])){
-											result=0;
-										}
-									}
-									if(result==0){
-										break;
-									}
-								}
-								if(result!=0){
-									pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
-									pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-										if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
-											printf(error_with_run);
-										}
-										else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
-											printf(error_with_duty_cycle);
-										}
-										else{
-											pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
-											pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
-											pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
-											state=RUNNING_INFI;
-											erase_data(Adrr_flash.Adrr_numer_of_pulses);
-										}
-								}
-								else{
-									printf(error_with_run);
-								}
-							}
-							else if (ptr==NULL && state!=RUNNING_INFI){
-								for(int i=1;i<MAX_TOKENS;i++){
-									result=1;
-									for(int j=0;j<strlen(tokens[i]);j++){
-										if(!isdigit((unsigned char)tokens[i][j])){
-											result=0;
-										}
-									}
-									if(result==0){
-										break;
-									}
-								}
-									if(result!=0){
-										pulse_para.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
-										pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
-										pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-										if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
-											printf(error_with_run);
-										}
-										else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
-											printf(error_with_duty_cycle);
-										}
-										else{
-											pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
-											pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
-											pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
-											erase_data(Adrr_flash.Adrr_numer_of_pulses);
-											state=RUNNING_N_TIMES;
-										}
-									}
-									else{
-										printf(error_with_run);
-									}
-							}
-							for (int i = 0; i < sizeof(tokens) / sizeof(tokens[0]); i++) {
-								 free(tokens[i]);
-							}
-						}
-				}
-				else if (strcmp(line_buffer, "stop") == 0){
-					state=2;
-				}
-				else if (strcmp(line_buffer, "read") == 0){
-					if(read_data(Adrr_flash.Adrr_numer_of_pulses+PVD)==1){
-						pulse_flag.pvd=0;
-						state=READ_DATA;
-					}
-					else{
-						printf("\n\rPower lose didn't occur\n\r");
-					}
-				}
-				else if (strcmp(line_buffer, "cont") == 0){
-					int i=0;
-					i=read_data(Adrr_flash.Adrr_numer_of_pulses+IF_INFINITY);
-					if(pulse_flag.if_infinity==0 || i==0){
-                    	pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
-                    	if(pulse_para.numer_of_pulses!=0){
-							pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
-							pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
-							pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
-							pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
-							pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
-							erase_data(Adrr_flash.Adrr_numer_of_pulses);
-							state=RUNNING_N_TIMES;
-                    	}
-                    	else{
-                    		state=DONE;
-                    	}
-					}
-					else if(pulse_flag.if_infinity==1 || i==1){
-						if(read_data(Adrr_flash.Adrr_numer_of_pulses)>0){
-							pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
-							pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
-							pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
-							pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
-							pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
-							erase_data(Adrr_flash.Adrr_numer_of_pulses);
-							state=RUNNING_INFI;
-						}
-						else{
-							state=DONE;
-						}
-					}
-				}
-				else {
-					printf(error);
-					printf(menu);
-				}
-				printf("\n\r");
-				for(int i;i<line_length;i++){
-					line_buffer[i]='\0';
-					}
-				line_length = 0;
-			}
-			else{
-				printf(error);
-				printf(menu);
-			}
+ 			display_menu(*line_buffer);
 		}
  		else if (value == '\177') {
- 		            if (line_length > 0) {
- 		            	line_length--;
- 		            	printf("\177 \177");
- 		            }
+ 			if (line_length > 0) {
+				line_length--;
+				printf("\177 \177");
+ 		   }
  		}
 		else {
 			if (line_length >= LINE_MAX_LENGTH) {
@@ -553,6 +386,150 @@ void MENU_USB(uint8_t value){
 		}
 }
 
+void display_menu(char table){
+	int result;
+	char * ptr;
+	if (line_length > 0) {
+		line_buffer[line_length] = '\0';
+			if (strncmp(line_buffer, "run",3) == 0) {
+				if(pulse_flag.if_running==1){
+					printf("\n\rA program is working, to enter new parameters use stop first\n\r");
+				}
+				else{
+					splitString(line_buffer, tokens);
+					ptr=strpbrk(tokens[1], "oo");
+					if((!(ptr==NULL)) && state!=RUNNING_N_TIMES){
+						for(int i=2;i<MAX_TOKENS;i++){
+							result=1;
+							for(int j=0;j<strlen(tokens[i]);j++){
+								if(!isdigit((unsigned char)tokens[i][j])){
+									result=0;
+								}
+							}
+							if(result==0){
+								break;
+							}
+						}
+						if(result!=0){
+							pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+							pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+								if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
+									printf(error_with_run);
+								}
+								else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+									printf(error_with_duty_cycle);
+								}
+								else{
+									pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+									pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+									pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+									state=RUNNING_INFI;
+									erase_data(Adrr_flash.Adrr_numer_of_pulses);
+								}
+						}
+						else{
+							printf(error_with_run);
+						}
+					}
+					else if (ptr==NULL && state!=RUNNING_INFI){
+						for(int i=1;i<MAX_TOKENS;i++){
+							result=1;
+							for(int j=0;j<strlen(tokens[i]);j++){
+								if(!isdigit((unsigned char)tokens[i][j])){
+									result=0;
+								}
+							}
+							if(result==0){
+								break;
+							}
+						}
+							if(result!=0){
+								pulse_para.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
+								pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+								pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+								if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
+									printf(error_with_run);
+								}
+								else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+									printf(error_with_duty_cycle);
+								}
+								else{
+									pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+									pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+									pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+									erase_data(Adrr_flash.Adrr_numer_of_pulses);
+									state=RUNNING_N_TIMES;
+								}
+							}
+							else{
+								printf(error_with_run);
+							}
+					}
+					for (int i = 0; i < sizeof(tokens) / sizeof(tokens[0]); i++) {
+						 free(tokens[i]);
+					}
+				}
+		}
+		else if (strcmp(line_buffer, "stop") == 0){
+			state=SAVE_DATA;
+		}
+		else if (strcmp(line_buffer, "read") == 0){
+			if(pulse_flag.pvd==0){
+				pulse_flag.pvd=0;
+				state=READ_DATA;
+			}
+			else{
+				printf("\n\rPower lose didn't occur\n\r");
+			}
+		}
+		else if (strcmp(line_buffer, "cont") == 0){
+			int i=0;
+			i=read_data(Adrr_flash.Adrr_numer_of_pulses+IF_INFINITY);
+			if(pulse_flag.if_infinity==0 || i==0){
+            	pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
+            	if(pulse_para.numer_of_pulses!=0){
+					pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
+					pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
+					pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
+					pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
+					pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
+					erase_data(Adrr_flash.Adrr_numer_of_pulses);
+					state=RUNNING_N_TIMES;
+            	}
+            	else{
+            		state=DONE;
+            	}
+			}
+			else if(pulse_flag.if_infinity==1 || i==1){
+				if(read_data(Adrr_flash.Adrr_numer_of_pulses)>0){
+					pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
+					pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
+					pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
+					pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
+					pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
+					erase_data(Adrr_flash.Adrr_numer_of_pulses);
+					state=RUNNING_INFI;
+				}
+				else{
+					state=DONE;
+				}
+			}
+		}
+		else {
+			printf(error);
+			printf(menu);
+		}
+		printf("\n\r");
+		for(int i;i<line_length;i++){
+			line_buffer[i]='\0';
+			}
+		line_length = 0;
+	}
+	else{
+		printf(error);
+		printf(menu);
+	}
+}
 uint32_t ASCII_TO_uint8_t(const char *table){
 	uint32_t result = 0;
 	uint32_t numeric_value=0;
@@ -581,6 +558,39 @@ void splitString(const char* input_string, char** tokens) {
         token_count++;
     }
     free(copy_of_input);
+}
+
+void generate_pulse(void){
+	  PULSE_PORT->BSRR = PULSE_LOW;
+	  while((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  HAL_Delay((uint32_t)pulse_para.config.Ton);
+	  PULSE_PORT->BSRR |= PULSE_HIGH;
+	  while(!(PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  HAL_Delay((uint32_t)pulse_para.config.Toff);
+	  (pulse_para.total_pulse_generated)++;
+}
+
+void read(void){
+	pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
+	pulse_para.total_pulse_generated=read_data(Adrr_flash.Adrr_total_pulse_generated);
+	pulse_para.config.Ton=read_data(Adrr_flash.Adrr_Ton);
+	pulse_para.config.Toff=read_data(Adrr_flash.Adrr_Toff);
+	pulse_para.config.freq=read_data(Adrr_flash.Adrr_freq);
+	pulse_para.config.duty_cycle=read_data(Adrr_flash.Adrr_duty_cycle);
+}
+
+void display(void){
+	  printf("\n\r");
+	  if(pulse_para.numer_of_pulses==1){
+		 sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+	  }
+	  else{
+		  sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+	  }
+	  HAL_UART_Transmit(&huart2, (uint8_t*)line_buffer, strlen(line_buffer), 50);
+	  for(int i;i<strlen(line_buffer);i++){
+		  line_buffer[i]='\0';
+	  }
 }
 
 void TIM6_IRQHandler(void){
