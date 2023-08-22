@@ -1,0 +1,632 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "usart.h"
+#include "gpio.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include "standby.h"
+#include "tim6.h"
+#include "flash.h"
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+#define LINE_MAX_LENGTH 120
+#define MAX_TOKENS 4
+#define IF_INFINITY 4
+#define PVD 8
+#define SIZE_OF_VARIABLE 10
+#define PULSE_PORT GPIOA
+#define PULSE_LOW ~(1U<<0) & ~(1U<<1) & ~(1U<<6)
+#define PULSE_HIGH (1U<<0) | (1U<<1) | (1U<<6)
+#define POWER_LED_PORT  GPIOB
+#define POWER_LED_PIN  (1U<<3)
+#define STATUS_LED_PORT GPIOB
+#define STATUS_LED_PIN (1U<<5)
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+enum STATE_OF_PROGRAM{
+	RUNNING_INFI,
+	RUNNING_N_TIMES,
+	SAVE_DATA,
+	READ_DATA,
+	DISPLAY_DATA,
+	DONE
+}state;
+
+typedef struct {
+	uint32_t Adrr_numer_of_pulses;
+	uint32_t Adrr_total_pulse_generated;
+	uint32_t Adrr_Ton;
+	uint32_t Adrr_Toff;
+	uint32_t Adrr_freq;
+	uint32_t Adrr_duty_cycle;
+} Adrress;
+
+struct imp_config{
+	uint32_t freq;
+	uint32_t duty_cycle;
+	uint32_t Ton;
+	uint32_t Toff;
+	uint32_t Period;
+};
+
+typedef struct {
+	uint32_t numer_of_pulses;
+	uint32_t total_pulse_generated;
+	struct imp_config config;
+} running_state;
+
+typedef struct{
+	uint32_t if_infinity;
+	uint32_t if_running;
+	uint32_t pvd;
+	uint32_t save;
+}flag;
+
+flag pulse_flag;
+Adrress Adrr_flash;
+running_state pulse_para;
+
+uint32_t* ptr_to_data_struct = (uint32_t*)&pulse_para;
+uint8_t value;
+
+static char line_buffer[LINE_MAX_LENGTH + 1];
+char* tokens[MAX_TOKENS];
+static uint32_t line_length;
+static char menu[]="\n\r---------------HOW TO USE---------------\n\rrun: Start a program\n\rstop: Stop a program\n\r"
+				   "read: To read value (only if usb cable was off)\n\rcont: To continue\n\r";
+static char error[]="\n\rWrong key\n\r";
+static char error_with_run[]="\r\nrun num freq duty cycle(max 99) or run oo(infinitive) freq duty cycle(max 99)\n\r "
+							 "\n\r Where num mean how many pulses we want to generate, freq means frequency\n\r";
+static char error_with_duty_cycle[]="\n\rToo high value of duty cycle\n\r";
+static char error_with_lenght[]="Too long command";
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+/* USER CODE BEGIN PFP */
+/* USER CODE BEGIN PFP */
+void STANDBY(void);
+void MENU_USB(uint8_t data);
+void display_menu(char table);
+void PG_init(void);
+void TIM6_init(void);
+void GPIO_LEDS(void);
+void generate_pulse(void);
+void read(void);
+void display(void);
+void save_data_to_flash(uint32_t Adrr, uint32_t* data, uint32_t size);
+void erase_data_from_flash(uint32_t Address);
+uint32_t read_data_from_flash(uint32_t Address);
+uint32_t ASCII_TO_uint8_t(const char *table);
+void splitString(const char* input_string, char** tokens);
+void TIM6_IRQHandler(void);
+void TIM6_Callback(void);
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+int __io_putchar(int ch)
+{
+    HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, 0);
+    return 1;
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+  if (huart == &huart2) {
+	  MENU_USB(value);
+	  HAL_UART_Receive_IT(&huart2, &value, 1);
+	  HAL_UART_Transmit(&huart2, &value, 1, 0);
+ }
+}
+
+void TIM6_Callback(void){
+	if(state==RUNNING_INFI|| state==RUNNING_N_TIMES){
+		STATUS_LED_PORT->ODR^=STATUS_LED_PIN;
+	}
+	else{
+		STATUS_LED_PORT->ODR=STATUS_LED_PIN;
+	}
+}
+
+void HAL_PWR_PVDCallback(void){
+	static bool was_executed = false;
+    if (was_executed) {
+    	pulse_flag.pvd=1;
+		POWER_LED_PORT->ODR=~POWER_LED_PIN;
+    }
+    else{
+    	was_executed=true;
+    }
+}
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+  /* USER CODE BEGIN 1 */
+	Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
+	Adrr_flash.Adrr_total_pulse_generated=0x0800FFA4;
+	Adrr_flash.Adrr_Ton=0x0800FFB0;
+	Adrr_flash.Adrr_Toff=0x0800FFB4;
+	Adrr_flash.Adrr_freq=0x0800FFA8;
+	Adrr_flash.Adrr_duty_cycle=0x0800FFAC;
+	state=DONE;
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+  PG_init();
+  GPIO_LEDS();
+  TIM6_init();
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+  /* USER CODE BEGIN 2 */
+  printf(menu);
+  HAL_UART_Receive_IT(&huart2, &value, 1);
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while(1){
+	  if(pulse_flag.pvd==0){
+		  POWER_LED_PORT->ODR|=POWER_LED_PIN ;
+	  }
+
+	  switch(state){
+	  	  case RUNNING_INFI:
+	  		  generate_pulse();
+	  		  pulse_flag.if_running=1;
+	  		  pulse_flag.if_infinity=1;
+	  		  break;
+	  	  case RUNNING_N_TIMES:
+	  		  generate_pulse();
+	  		  (pulse_para.numer_of_pulses)--;
+	  		 if(pulse_para.numer_of_pulses>0 && pulse_flag.if_running==1){
+	  			state=RUNNING_N_TIMES;
+	  			pulse_flag.if_infinity=0;
+	  			pulse_flag.if_running=1;
+	  		  }
+	  		 else{
+	  			state=SAVE_DATA;
+	  		  }
+	  		 break;
+	  	  case SAVE_DATA:
+	  		 pulse_flag.if_running=0;
+	  		 if(pulse_flag.if_infinity==1){
+	  			pulse_para.numer_of_pulses=1;
+	  			save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,sizeof(pulse_para));
+	  		  }
+	  		 else if(pulse_flag.if_infinity==0){
+	  			save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,sizeof(pulse_para));
+	  		  }
+	  		  pulse_flag.save=1;
+	  		 if(pulse_flag.pvd==0){
+	  			  state=READ_DATA;
+	  		  }
+	  		 else{
+	  			  state=DONE;
+	  		  }
+	  		break;
+	  	  case READ_DATA:
+	  		read();
+	  		state=DISPLAY_DATA;
+	  		break;
+	  	  case DISPLAY_DATA:
+	  		display();
+	  		state=DONE;
+	  		break;
+	  	  case DONE:
+	  		break;
+	  	  }
+	  if(pulse_flag.pvd==1){
+		 state=SAVE_DATA;
+		 if(pulse_flag.save==1){
+			 STANDBY();
+		 }
+	  }
+  }
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+
+  /** Configure the main internal regulator output voltage
+  */
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+  RCC_OscInitStruct.MSICalibrationValue = 0;
+  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_SYSCLK;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/* USER CODE BEGIN 4 */
+
+void GPIO_LEDS(void){
+	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
+
+	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
+	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
+	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
+	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
+}
+
+void PG_init(void){
+	RCC->IOPENR  |= RCC_IOPENR_GPIOAEN;
+
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE0_0)|(GPIOA->MODER & ~GPIO_MODER_MODE0);
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE1_0)|(GPIOA->MODER & ~GPIO_MODER_MODE1);
+	PULSE_PORT -> MODER = (GPIO_MODER_MODE6_0)|(GPIOA->MODER & ~GPIO_MODER_MODE6);
+
+	PULSE_PORT-> BSRR |= (1U<<0);
+	PULSE_PORT-> BSRR |= (1U<<1);
+	PULSE_PORT-> BSRR |= (1U<<6);
+}
+
+void MENU_USB(uint8_t value){
+ 		if (value == '\r' || value == '\n') {
+ 			display_menu(*line_buffer);
+		}
+ 		else if (value == '\177') {
+ 			if (line_length > 0) {
+				line_length--;
+				printf("\177 \177");
+ 		   }
+ 		}
+		else {
+			if (line_length >= LINE_MAX_LENGTH) {
+				line_length = 0;
+				printf(error);
+				printf(error_with_lenght);
+			}
+			line_buffer[line_length++] = value;
+		}
+}
+
+void display_menu(char table){
+	int result;
+	char * ptr;
+	if (line_length > 0) {
+		line_buffer[line_length] = '\0';
+			if (strncmp(line_buffer, "run",3) == 0) {
+				if(pulse_flag.if_running==1){
+					printf("\n\rA program is working, to enter new parameters use stop first\n\r");
+				}
+				else{
+					splitString(line_buffer, tokens);
+					ptr=strpbrk(tokens[1], "oo");
+					if((!(ptr==NULL)) && state!=RUNNING_N_TIMES){
+						for(int i=2;i<MAX_TOKENS;i++){
+							result=1;
+							for(int j=0;j<strlen(tokens[i]);j++){
+								if(!isdigit((unsigned char)tokens[i][j])){
+									result=0;
+								}
+							}
+							if(result==0){
+								break;
+							}
+						}
+						if(result!=0){
+							pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+							pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+								if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
+									printf(error_with_run);
+								}
+								else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+									printf(error_with_duty_cycle);
+								}
+								else{
+									pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+									pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+									pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+									state=RUNNING_INFI;
+									erase_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+								}
+						}
+						else{
+							printf(error_with_run);
+						}
+					}
+					else if (ptr==NULL && state!=RUNNING_INFI){
+						for(int i=1;i<MAX_TOKENS;i++){
+							result=1;
+							for(int j=0;j<strlen(tokens[i]);j++){
+								if(!isdigit((unsigned char)tokens[i][j])){
+									result=0;
+								}
+							}
+							if(result==0){
+								break;
+							}
+						}
+							if(result!=0){
+								pulse_para.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
+								pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+								pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+								if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
+									printf(error_with_run);
+								}
+								else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+									printf(error_with_duty_cycle);
+								}
+								else{
+									pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+									pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+									pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+									erase_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+									state=RUNNING_N_TIMES;
+								}
+							}
+							else{
+								printf(error_with_run);
+							}
+					}
+					for (int i = 0; i < sizeof(tokens) / sizeof(tokens[0]); i++) {
+						 free(tokens[i]);
+					}
+				}
+		}
+		else if (strcmp(line_buffer, "stop") == 0){
+			state=SAVE_DATA;
+		}
+		else if (strcmp(line_buffer, "read") == 0){
+			if(pulse_flag.pvd==0){
+				pulse_flag.pvd=0;
+				state=READ_DATA;
+			}
+			else{
+				printf("\n\rPower lose didn't occur\n\r");
+			}
+		}
+		else if (strcmp(line_buffer, "cont") == 0){
+			int i=0;
+			i=read_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+			if(pulse_flag.if_infinity==0 || i==0){
+            	pulse_para.numer_of_pulses=read_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+            	if(pulse_para.numer_of_pulses!=0){
+					pulse_para.total_pulse_generated=read_data_from_flash(Adrr_flash.Adrr_total_pulse_generated);
+					pulse_para.config.Ton=read_data_from_flash(Adrr_flash.Adrr_Ton);
+					pulse_para.config.Toff=read_data_from_flash(Adrr_flash.Adrr_Toff);
+					pulse_para.config.duty_cycle=read_data_from_flash(Adrr_flash.Adrr_duty_cycle);
+					pulse_para.config.freq=read_data_from_flash(Adrr_flash.Adrr_freq);
+					erase_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+					state=RUNNING_N_TIMES;
+            	}
+            	else{
+            		state=DONE;
+            	}
+			}
+			else if(pulse_flag.if_infinity==1 || i==1){
+				if(read_data_from_flash(Adrr_flash.Adrr_numer_of_pulses)>0){
+					pulse_para.total_pulse_generated=read_data_from_flash(Adrr_flash.Adrr_total_pulse_generated);
+					pulse_para.config.Ton=read_data_from_flash(Adrr_flash.Adrr_Ton);
+					pulse_para.config.Toff=read_data_from_flash(Adrr_flash.Adrr_Toff);
+					pulse_para.config.duty_cycle=read_data_from_flash(Adrr_flash.Adrr_duty_cycle);
+					pulse_para.config.freq=read_data_from_flash(Adrr_flash.Adrr_freq);
+					erase_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+					state=RUNNING_INFI;
+				}
+				else{
+					state=DONE;
+				}
+			}
+		}
+		else {
+			printf(error);
+			printf(menu);
+		}
+		printf("\n\r");
+		for(int i;i<line_length;i++){
+			line_buffer[i]='\0';
+			}
+		line_length = 0;
+	}
+	else{
+		printf(error);
+		printf(menu);
+	}
+}
+uint32_t ASCII_TO_uint8_t(const char *table){
+	uint32_t result = 0;
+	uint32_t numeric_value=0;
+    int size = SIZE_OF_VARIABLE;
+    for (int i = 0; i < size; i++) {
+    	if(table[i]==' ' || table[i]=='\0'){
+    		break;
+    	}
+    	else{
+        	numeric_value = table[i] - '0';
+            result = result * 10 + numeric_value;
+    	}
+    }
+    return result;
+}
+
+void splitString(const char* input_string, char** tokens) {
+	const char delimiters[] = " \r\n";
+    char* copy_of_input = strdup(input_string);
+    char* token = strtok(copy_of_input, delimiters);
+
+    int token_count = 0;
+    while (token != NULL && token_count < MAX_TOKENS) {
+        tokens[token_count] = strdup(token);
+        token = strtok(NULL, delimiters);
+        token_count++;
+    }
+    free(copy_of_input);
+}
+
+void generate_pulse(void){
+	  PULSE_PORT->BSRR = PULSE_LOW;
+	  while((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  HAL_Delay((uint32_t)pulse_para.config.Ton);
+	  PULSE_PORT->BSRR |= PULSE_HIGH;
+	  while(!(PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  HAL_Delay((uint32_t)pulse_para.config.Toff);
+	  (pulse_para.total_pulse_generated)++;
+}
+
+void read(void){
+	pulse_para.numer_of_pulses=read_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+	pulse_para.total_pulse_generated=read_data_from_flash(Adrr_flash.Adrr_total_pulse_generated);
+	pulse_para.config.Ton=read_data_from_flash(Adrr_flash.Adrr_Ton);
+	pulse_para.config.Toff=read_data_from_flash(Adrr_flash.Adrr_Toff);
+	pulse_para.config.freq=read_data_from_flash(Adrr_flash.Adrr_freq);
+	pulse_para.config.duty_cycle=read_data_from_flash(Adrr_flash.Adrr_duty_cycle);
+}
+
+void display(void){
+	  printf("\n\r");
+	  if(pulse_para.numer_of_pulses==1){
+		 sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+	  }
+	  else{
+		  sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+	  }
+	  HAL_UART_Transmit(&huart2, (uint8_t*)line_buffer, strlen(line_buffer), 50);
+	  for(int i;i<strlen(line_buffer);i++){
+		  line_buffer[i]='\0';
+	  }
+}
+
+void TIM6_IRQHandler(void){
+	TIM6->SR &=~TIM_SR_UIF;
+	if(pulse_flag.pvd==0){
+		TIM6_Callback();
+	}
+}
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */

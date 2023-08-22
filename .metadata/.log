@@ -9949,3 +9949,2564 @@ Reason: (5) Unknown MCU found on target.
 
 !ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-18 20:51:01.693
 !MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+!SESSION 2023-08-18 22:23:17.769 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-18 22:23:33.438
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-18 22:23:33.438
+!MESSAGE Log4j2 initialized with config file C:\Users\Dell\OneDrive\Pulpit\STAZ\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-18 22:23:40.393
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-08-22 20:18:35.296 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-22 20:18:58.596
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-22 20:18:58.596
+!MESSAGE Log4j2 initialized with config file C:\Users\Dell\OneDrive\Pulpit\STAZ\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-22 20:19:12.903
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:24:13.139
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:24:13.139
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:24:13.139
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:24:13.139
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:24:13.602
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:24:13.602
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:24:13.602
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:24:13.604
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:26:19.336
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:26:19.336
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:26:19.336
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:26:19.337
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:26:19.744
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:26:19.744
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:26:19.744
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:26:19.745
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 20:26:26.652
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:27:16.449
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:27:16.449
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:27:16.449
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:27:16.450
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:27:16.682
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:27:16.682
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:27:16.682
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:27:16.683
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 20:27:19.346
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 20:27:19.373
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 20:27:19.374
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 20:27:19.374
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:27:45.786
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:27:45.786
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:27:45.786
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:27:45.787
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:27:46.097
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:27:46.097
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:27:46.097
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:27:46.098
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 20:27:51.749
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:29:22.345
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:29:22.345
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:29:22.345
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:29:22.345
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:29:22.599
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:29:22.599
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:29:22.599
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:29:22.600
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 20:29:29.095
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:40:46.431
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:40:46.431
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:40:46.431
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:40:46.432
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:41:01.028
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:41:01.028
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:41:01.028
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:41:01.030
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:41:22.251
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:41:22.251
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:41:22.251
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:41:22.251
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:47:06.708
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:47:06.708
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:47:06.708
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:47:06.708
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:47:29.326
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:47:29.326
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:47:29.326
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:47:29.326
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:48:01.193
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:48:01.193
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:48:01.193
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:48:01.207
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:48:09.081
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:48:09.081
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:48:09.081
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:48:09.082
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:48:14.094
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:48:14.094
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:48:14.094
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:48:14.095
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:48:55.127
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:48:55.127
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:48:55.127
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:48:55.127
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:49:20.532
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:49:20.532
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:49:20.532
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:49:20.533
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:49:39.150
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:49:39.150
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:49:39.150
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:49:39.150
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:50:42.815
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:50:42.815
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:50:42.815
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:50:42.815
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:51:45.614
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:51:45.614
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:51:45.614
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:51:45.614
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:51:45.876
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:51:45.876
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:51:45.876
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:51:45.877
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 20:51:52.023
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/syscalls.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:59:25.525
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:59:25.525
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:59:25.525
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:59:25.526
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 20:59:40.040
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 20:59:40.040
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 20:59:40.040
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 20:59:40.040
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:00:29.808
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:00:29.808
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:00:29.808
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:00:29.808
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:00:53.477
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:00:53.477
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:00:53.477
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:00:53.478
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:01:06.452
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:01:06.452
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:01:06.452
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:01:06.452
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:01:24.048
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:01:24.048
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:01:24.048
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:01:24.052
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:01:29.725
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:01:29.725
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:01:29.725
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:01:29.725
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:01:29.940
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:01:29.940
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:01:29.940
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:01:29.941
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:01:35.405
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:02:50.186
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:02:50.186
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:02:50.186
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:02:50.187
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:02:50.430
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:02:50.430
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:02:50.430
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:02:50.431
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:02:56.419
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c
+
+!ENTRY org.eclipse.jface 2 0 2023-08-22 21:06:28.614
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-08-22 21:06:28.614
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.cdt.ui.search.finddecl"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.command.gotoaddress,Go to Address,
+		Go to Address,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.memory.abstractasynctablerendering,,,system)
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:07:04.964
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:07:04.964
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:07:04.964
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:07:04.964
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:07:08.069
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:07:08.069
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:07:08.069
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:07:08.069
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:07:08.264
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:07:08.264
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:07:08.264
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:07:08.264
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:07:13.707
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:08:54.134
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:08:54.134
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:08:54.134
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:08:54.134
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:08:54.410
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:08:54.410
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:08:54.410
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:08:54.411
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:12:32.139
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:12:32.139
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:12:32.139
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:12:32.140
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:12:32.375
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:12:32.375
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:12:32.375
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:12:32.376
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:12:38.351
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:16:15.976
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:16:40.979
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:16:40.979
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:16:40.979
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:16:40.979
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:16:41.209
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:16:41.209
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:16:41.209
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:16:41.209
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:19:24.609
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:19:24.609
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:19:24.609
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:19:24.610
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:19:24.827
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:19:24.827
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:19:24.827
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:19:24.828
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:19:31.135
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:19:45.669
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:19:45.669
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:19:45.669
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:19:45.669
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:19:45.988
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:19:45.988
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:19:45.988
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:19:45.988
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:19:51.981
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:21:36.145
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:21:36.145
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:21:36.145
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:21:36.146
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:23:37.386
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:23:37.386
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:23:37.386
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:23:37.386
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:23:37.613
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:23:37.613
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:23:37.613
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:23:37.614
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:23:41.026
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:23:41.040
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:23:41.040
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:23:41.040
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:23:53.510
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:23:53.510
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:23:53.510
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:23:53.510
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:23:53.796
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:23:53.796
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:23:53.796
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:23:53.797
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:23:59.255
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:24:24.447
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:25:08.734
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:25:08.734
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:25:08.734
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:25:08.734
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:25:08.957
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:25:08.957
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:25:08.957
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:25:08.957
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:25:14.904
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:25:29.873
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:25:53.832
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:25:53.832
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:25:53.832
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:25:53.833
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:25:54.051
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:25:54.051
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:25:54.051
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:25:54.052
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:25:56.669
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:25:56.697
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:25:56.697
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:25:56.697
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:28:41.038
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:28:41.038
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:28:41.038
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:28:41.039
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:28:41.270
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:28:41.270
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:28:41.270
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:28:41.270
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:28:44.737
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:28:44.753
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:28:44.753
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:28:44.753
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:28:57.987
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:28:57.987
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:28:57.987
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:28:57.987
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:28:58.280
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:28:58.280
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:28:58.280
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:28:58.280
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:31:49.413
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:31:49.413
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:31:49.413
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:31:49.414
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:31:49.705
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:31:49.705
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:31:49.705
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:31:49.706
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:31:55.687
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:32:39.448
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:33:06.432
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:33:06.432
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:33:06.432
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:33:06.433
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:33:06.651
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:33:06.651
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:33:06.651
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:33:06.651
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:33:09.269
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:33:09.296
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:33:09.296
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:33:09.296
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:33:24.998
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:33:24.998
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:33:24.998
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:33:24.998
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:33:25.291
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:33:25.291
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:33:25.291
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:33:25.291
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:33:30.747
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:35:31.158
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:35:31.158
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:35:31.158
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:35:31.159
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:35:31.424
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:35:31.424
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:35:31.424
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:35:31.424
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:35:35.811
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:35:35.826
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:35:35.826
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:35:35.826
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:35:49.671
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:35:49.671
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:35:49.671
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:35:49.671
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:35:50.002
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:35:50.002
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:35:50.002
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:35:50.003
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:35:53.398
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:35:53.419
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:35:53.419
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:35:53.419
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:36:10.420
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:36:10.420
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:36:10.420
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:36:10.421
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:36:10.715
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:36:10.715
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:36:10.715
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:36:10.715
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:36:16.204
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:39:05.610
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:39:05.610
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:39:05.610
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:39:05.611
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:39:05.847
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:39:05.848
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:39:05.848
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:39:05.848
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:39:12.186
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:44:37.246
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:44:37.246
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:44:37.246
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:44:37.246
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:44:55.569
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:44:55.569
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:44:55.569
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:44:55.570
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:09.950
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:09.950
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:09.950
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:09.950
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:26.297
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:26.297
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:26.297
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:26.298
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:35.966
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:35.966
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:35.966
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:35.967
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:36.140
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:36.140
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:36.140
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:36.140
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 21:45:38.749
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 21:45:38.775
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 21:45:38.776
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 21:45:38.776
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:55.945
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:55.945
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:55.945
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:55.946
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:45:56.246
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:45:56.246
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:45:56.246
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:45:56.247
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:46:01.725
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:48:14.943
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:48:14.943
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:48:14.943
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:48:14.944
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:50:39.225
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:50:39.225
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:50:39.225
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:50:39.226
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:51:38.052
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:51:38.052
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:51:38.052
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:51:38.053
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:51:43.940
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:51:43.940
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:51:43.940
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:51:43.941
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:51:44.156
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:51:44.156
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:51:44.156
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:51:44.157
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:52:33.064
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:54:00.594
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:54:00.594
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:54:00.594
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:54:00.594
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:54:00.831
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:54:00.831
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:54:00.831
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:54:00.831
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:54:08.089
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:54:59.183
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:56:04.971
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:56:04.971
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:56:04.971
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:56:04.971
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:56:05.241
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:56:05.241
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:56:05.241
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:56:05.242
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 21:56:11.181
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:57:39.634
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:57:39.634
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:57:39.634
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:57:39.635
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 21:57:39.862
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 21:57:39.862
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 21:57:39.862
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 21:57:39.862
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:05:19.235
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:05:19.235
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:05:19.235
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:05:19.235
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:05:19.432
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:05:19.432
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:05:19.432
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:05:19.432
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:05:22.046
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:05:22.063
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:05:22.063
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:05:22.063
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:05:32.517
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:05:32.517
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:05:32.517
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:05:32.518
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:05:32.814
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:05:32.814
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:05:32.814
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:05:32.814
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:05:38.259
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:06:11.602
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:08:21.542
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:08:21.542
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:08:21.542
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:08:21.542
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:08:21.808
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:08:21.808
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:08:21.808
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:08:21.808
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:08:28.934
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:10:52.994
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:10:52.994
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:10:52.994
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:10:52.994
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:10:53.263
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:10:53.263
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:10:53.263
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:10:53.263
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:10:57.661
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:10:57.691
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:10:57.691
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:10:57.691
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:11:24.386
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:11:24.386
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:11:24.386
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:11:24.386
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:11:24.608
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:11:24.608
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:11:24.608
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:11:24.609
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:11:28.030
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:11:28.058
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:11:28.058
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:11:28.058
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:11:41.880
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:11:41.880
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:11:41.880
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:11:41.881
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:11:42.169
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:11:42.169
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:11:42.169
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:11:42.170
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:11:47.664
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:15:11.390
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:15:11.390
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:15:11.390
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:15:11.390
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:15:11.645
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:15:11.645
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:15:11.645
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:15:11.645
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:15:16.078
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:15:16.107
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:15:16.107
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:15:16.107
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:15:33.172
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:15:33.172
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:15:33.172
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:15:33.173
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:15:33.465
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:15:33.465
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:15:33.465
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:15:33.465
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:15:38.822
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:20:55.669
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:20:55.669
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:20:55.669
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:20:55.669
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:20:55.907
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:20:55.907
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:20:55.907
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:20:55.907
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:21:02.209
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:27:57.946
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:27:57.946
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:27:57.946
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:27:57.947
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.ui 4 4 2023-08-22 22:27:57.984
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Invalid Input: Must be project's active .ioc file.
+
+Project's 'Impulsator_2.0' active one is 'Impulsator_2.0.ioc' file
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.init(CubeMxEditor.java:852)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at jdk.internal.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:105)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4785)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:660)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:624)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:790)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1264)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3210)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3100)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3068)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3059)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:548)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:508)
+	at org.eclipse.ui.actions.OpenFileAction.openFile(OpenFileAction.java:103)
+	at org.eclipse.ui.actions.OpenSystemEditorAction.run(OpenSystemEditorAction.java:96)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:215)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$1.open(CommonNavigatorManager.java:183)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:800)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:797)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1116)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:454)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:296)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.ui 4 0 2023-08-22 22:27:57.984
+!MESSAGE Invalid Input: Must be project's active .ioc file.
+
+Project's 'Impulsator_2.0' active one is 'Impulsator_2.0.ioc' file
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:28:05.431
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:28:05.431
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:28:05.431
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-08-22 22:28:05.432
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.ui 4 4 2023-08-22 22:28:05.432
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Invalid Input: Must be project's active .ioc file.
+
+Project's 'Impulsator_2.0' active one is 'Impulsator_2.0.ioc' file
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.init(CubeMxEditor.java:852)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at jdk.internal.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:105)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4785)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:660)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:624)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:790)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1264)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3210)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3100)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3068)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3059)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:548)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:508)
+	at org.eclipse.ui.actions.OpenFileAction.openFile(OpenFileAction.java:103)
+	at org.eclipse.ui.actions.OpenSystemEditorAction.run(OpenSystemEditorAction.java:96)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:215)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$1.open(CommonNavigatorManager.java:183)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:800)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:797)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1116)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:454)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:296)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.ui 4 0 2023-08-22 22:28:05.432
+!MESSAGE Invalid Input: Must be project's active .ioc file.
+
+Project's 'Impulsator_2.0' active one is 'Impulsator_2.0.ioc' file
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:29:15.601
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:29:15.631
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:29:15.632
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:29:15.632
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:29:36.090
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:29:36.121
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:29:36.121
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:29:36.121
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:29:55.890
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/usart.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:30:46.240
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:30:46.507
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:30:55.508
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/stm32l0xx_it.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:31:50.366
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:32:51.951
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:33:14.530
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Src/stm32l0xx_it.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:33:19.587
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:34:39.588
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:38:00.970
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:38:00.970
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:38:00.970
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:39:27.392
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s
+
+!ENTRY org.eclipse.core.resources 4 77 2023-08-22 22:42:17.582
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-08-22 22:42:17.582
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-08-22 22:42:17.582
+!MESSAGE C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0 overlaps the location of another project: 'Impulsator_2.0'
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-08-22 22:42:40.665
+!MESSAGE ST-LINK GDB server failed to start (exit code = 5)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-08-22 22:42:40.688
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-08-22 22:42:40.688
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1816)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:204)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at jdk.internal.reflect.GeneratedMethodAccessor201.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-08-22 22:42:40.688
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (5) Unknown MCU found on target.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2023-08-22 22:43:00.919
+!MESSAGE Unable to locate file: C:/Users/Karol/Desktop/test2/Debug/../Core/Startup/startup_stm32l073rztx.s

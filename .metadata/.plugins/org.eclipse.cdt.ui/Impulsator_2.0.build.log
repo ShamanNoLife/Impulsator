@@ -1,10 +1,10 @@
-20:50:51 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+22:42:55 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
 make -j12 all 
 arm-none-eabi-size   Impulsator_2.0.elf 
    text	   data	    bss	    dec	    hex	filename
-  29464	    532	   2276	  32272	   7e10	Impulsator_2.0.elf
+  27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
 Finished building: default.size.stdout
  
 
-20:50:51 Build Finished. 0 errors, 0 warnings. (took 257ms)
+22:42:55 Build Finished. 0 errors, 0 warnings. (took 251ms)
 

@@ -6051,3 +6051,1294 @@ arm-none-eabi-size   Impulsator_2.0.elf
   29464	    532	   2276	  32272	   7e10	Impulsator_2.0.elf
 Finished building: default.size.stdout
  
+20:24:13 **** Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'erase_data':
+../Core/Src/flash.c:44:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   44 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:35:6: note: declared here
+   35 | void erase_data(uint32_t Address){
+      |      ^~~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27304	    508	   2292	  30104	   7598	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:26:19 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27304	    508	   2292	  30104	   7598	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:27:16 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27304	    508	   2292	  30104	   7598	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+20:27:46 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27304	    508	   2292	  30104	   7598	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+20:29:22 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27296	    508	   2292	  30096	   7590	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:40:46 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:260:33: error: too few arguments to function 'save_data_to_flash'
+  260 |                                 save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct);
+      |                                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:137:6: note: declared here
+  137 | void save_data_to_flash(uint32_t Adrr, uint32_t* data, uint32_t size);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'read':
+../Core/Src/main.c:571:36: warning: implicit declaration of function 'read_data' [-Wimplicit-function-declaration]
+  571 |         pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
+      |                                    ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:41:01 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'read':
+../Core/Src/main.c:571:36: warning: implicit declaration of function 'read_data' [-Wimplicit-function-declaration]
+  571 |         pulse_para.numer_of_pulses=read_data(Adrr_flash.Adrr_numer_of_pulses);
+      |                                    ^~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `read':
+C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:571: undefined reference to `read_data'
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:572: undefined reference to `read_data'
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:573: undefined reference to `read_data'
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:574: undefined reference to `read_data'
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:575: undefined reference to `read_data'
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:576: more undefined references to `read_data' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: Impulsator_2.0.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:41:22 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27296	    508	   2292	  30096	   7590	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:47:06 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:99:1: warning: unnamed struct/union that defines no instances
+   99 | }__attribute__((packed)); running_state;
+      | ^
+../Core/Src/main.c:99:27: warning: data definition has no type or storage class
+   99 | }__attribute__((packed)); running_state;
+      |                           ^~~~~~~~~~~~~
+../Core/Src/main.c:99:27: warning: type defaults to 'int' in declaration of 'running_state' [-Wimplicit-int]
+../Core/Src/main.c:108:1: error: unknown type name 'running_state'
+  108 | running_state pulse_para;
+      | ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:240:37: error: 'flag' has no member named 'if_running'
+  240 |                           pulse_flag.if_running=1;
+      |                                     ^
+../Core/Src/main.c:241:37: error: 'flag' has no member named 'if_infinity'
+  241 |                           pulse_flag.if_infinity=1;
+      |                                     ^
+../Core/Src/main.c:245:38: error: request for member 'numer_of_pulses' in something not a structure or union
+  245 |                           (pulse_para.numer_of_pulses)--;
+      |                                      ^
+../Core/Src/main.c:246:39: error: request for member 'numer_of_pulses' in something not a structure or union
+  246 |                          if(pulse_para.numer_of_pulses>0 && pulse_flag.if_running==1){
+      |                                       ^
+../Core/Src/main.c:246:71: error: 'flag' has no member named 'if_running'
+  246 |                          if(pulse_para.numer_of_pulses>0 && pulse_flag.if_running==1){
+      |                                                                       ^
+../Core/Src/main.c:248:43: error: 'flag' has no member named 'if_infinity'
+  248 |                                 pulse_flag.if_infinity=0;
+      |                                           ^
+../Core/Src/main.c:249:43: error: 'flag' has no member named 'if_running'
+  249 |                                 pulse_flag.if_running=1;
+      |                                           ^
+../Core/Src/main.c:256:36: error: 'flag' has no member named 'if_running'
+  256 |                          pulse_flag.if_running=0;
+      |                                    ^
+../Core/Src/main.c:257:39: error: 'flag' has no member named 'if_infinity'
+  257 |                          if(pulse_flag.if_infinity==1){
+      |                                       ^
+../Core/Src/main.c:258:43: error: request for member 'numer_of_pulses' in something not a structure or union
+  258 |                                 pulse_para.numer_of_pulses=1;
+      |                                           ^
+../Core/Src/main.c:261:44: error: 'flag' has no member named 'if_infinity'
+  261 |                          else if(pulse_flag.if_infinity==0){
+      |                                            ^
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:394:46: error: 'flag' has no member named 'if_running'
+  394 |                                 if(pulse_flag.if_running==1){
+      |                                              ^
+../Core/Src/main.c:413:67: error: request for member 'config' in something not a structure or union
+  413 |                                                         pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+      |                                                                   ^
+../Core/Src/main.c:414:67: error: request for member 'config' in something not a structure or union
+  414 |                                                         pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+      |                                                                   ^
+../Core/Src/main.c:415:78: error: request for member 'config' in something not a structure or union
+  415 |                                                                 if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
+      |                                                                              ^
+../Core/Src/main.c:415:107: error: request for member 'config' in something not a structure or union
+  415 |                                                                 if(pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0){
+      |                                                                                                           ^
+../Core/Src/main.c:418:83: error: request for member 'config' in something not a structure or union
+  418 |                                                                 else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+      |                                                                                   ^
+../Core/Src/main.c:418:120: error: request for member 'config' in something not a structure or union
+  418 |                                                                 else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+      |                                                                                                                        ^
+../Core/Src/main.c:422:83: error: request for member 'config' in something not a structure or union
+  422 |                                                                         pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+      |                                                                                   ^
+../Core/Src/main.c:422:121: error: request for member 'config' in something not a structure or union
+  422 |                                                                         pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+      |                                                                                                                         ^
+../Core/Src/main.c:423:83: error: request for member 'config' in something not a structure or union
+  423 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                   ^
+../Core/Src/main.c:423:114: error: request for member 'config' in something not a structure or union
+  423 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                                                  ^
+../Core/Src/main.c:423:139: error: request for member 'config' in something not a structure or union
+  423 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                                                                           ^
+../Core/Src/main.c:424:83: error: request for member 'config' in something not a structure or union
+  424 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                   ^
+../Core/Src/main.c:424:106: error: request for member 'config' in something not a structure or union
+  424 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                                          ^
+../Core/Src/main.c:424:131: error: request for member 'config' in something not a structure or union
+  424 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                                                                   ^
+../Core/Src/main.c:446:75: error: request for member 'numer_of_pulses' in something not a structure or union
+  446 |                                                                 pulse_para.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
+      |                                                                           ^
+../Core/Src/main.c:447:75: error: request for member 'config' in something not a structure or union
+  447 |                                                                 pulse_para.config.freq=ASCII_TO_uint8_t(tokens[2]);
+      |                                                                           ^
+../Core/Src/main.c:448:75: error: request for member 'config' in something not a structure or union
+  448 |                                                                 pulse_para.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
+      |                                                                           ^
+../Core/Src/main.c:449:78: error: request for member 'numer_of_pulses' in something not a structure or union
+  449 |                                                                 if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
+      |                                                                              ^
+../Core/Src/main.c:449:111: error: request for member 'config' in something not a structure or union
+  449 |                                                                 if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
+      |                                                                                                               ^
+../Core/Src/main.c:449:140: error: request for member 'config' in something not a structure or union
+  449 |                                                                 if(pulse_para.numer_of_pulses==0 || pulse_para.config.freq==0 || pulse_para.config.duty_cycle==0 ){
+      |                                                                                                                                            ^
+../Core/Src/main.c:452:83: error: request for member 'config' in something not a structure or union
+  452 |                                                                 else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+      |                                                                                   ^
+../Core/Src/main.c:452:120: error: request for member 'config' in something not a structure or union
+  452 |                                                                 else if(pulse_para.config.duty_cycle>=100 || pulse_para.config.duty_cycle==0){
+      |                                                                                                                        ^
+../Core/Src/main.c:456:83: error: request for member 'config' in something not a structure or union
+  456 |                                                                         pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+      |                                                                                   ^
+../Core/Src/main.c:456:121: error: request for member 'config' in something not a structure or union
+  456 |                                                                         pulse_para.config.Period=(float)(1000/pulse_para.config.freq);
+      |                                                                                                                         ^
+../Core/Src/main.c:457:83: error: request for member 'config' in something not a structure or union
+  457 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                   ^
+../Core/Src/main.c:457:114: error: request for member 'config' in something not a structure or union
+  457 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                                                  ^
+../Core/Src/main.c:457:139: error: request for member 'config' in something not a structure or union
+  457 |                                                                         pulse_para.config.Ton=(float)((pulse_para.config.Period*pulse_para.config.duty_cycle)/100);
+      |                                                                                                                                           ^
+../Core/Src/main.c:458:83: error: request for member 'config' in something not a structure or union
+  458 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                   ^
+../Core/Src/main.c:458:106: error: request for member 'config' in something not a structure or union
+  458 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                                          ^
+../Core/Src/main.c:458:131: error: request for member 'config' in something not a structure or union
+  458 |                                                                         pulse_para.config.Toff=pulse_para.config.Period-pulse_para.config.Ton;
+      |                                                                                                                                   ^
+../Core/Src/main.c:487:38: error: 'flag' has no member named 'if_infinity'
+  487 |                         if(pulse_flag.if_infinity==0 || i==0){
+      |                                      ^
+../Core/Src/main.c:489:30: error: request for member 'numer_of_pulses' in something not a structure or union
+  489 |                 if(pulse_para.numer_of_pulses!=0){
+      |                              ^
+../Core/Src/main.c:496:43: error: 'flag' has no member named 'if_infinity'
+  496 |                         else if(pulse_flag.if_infinity==1 || i==1){
+      |                                           ^
+../Core/Src/main.c: In function 'generate_pulse':
+../Core/Src/main.c:554:41: error: request for member 'config' in something not a structure or union
+  554 |           HAL_Delay((uint32_t)pulse_para.config.Ton);
+      |                                         ^
+../Core/Src/main.c:557:41: error: request for member 'config' in something not a structure or union
+  557 |           HAL_Delay((uint32_t)pulse_para.config.Toff);
+      |                                         ^
+../Core/Src/main.c:558:22: error: request for member 'total_pulse_generated' in something not a structure or union
+  558 |           (pulse_para.total_pulse_generated)++;
+      |                      ^
+../Core/Src/main.c: In function 'read':
+../Core/Src/main.c:562:19: error: request for member 'numer_of_pulses' in something not a structure or union
+  562 |         pulse_para.numer_of_pulses=read_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
+      |                   ^
+../Core/Src/main.c:563:19: error: request for member 'total_pulse_generated' in something not a structure or union
+  563 |         pulse_para.total_pulse_generated=read_data_from_flash(Adrr_flash.Adrr_total_pulse_generated);
+      |                   ^
+../Core/Src/main.c:564:19: error: request for member 'config' in something not a structure or union
+  564 |         pulse_para.config.Ton=read_data_from_flash(Adrr_flash.Adrr_Ton);
+      |                   ^
+../Core/Src/main.c:565:19: error: request for member 'config' in something not a structure or union
+  565 |         pulse_para.config.Toff=read_data_from_flash(Adrr_flash.Adrr_Toff);
+      |                   ^
+../Core/Src/main.c:566:19: error: request for member 'config' in something not a structure or union
+  566 |         pulse_para.config.freq=read_data_from_flash(Adrr_flash.Adrr_freq);
+      |                   ^
+../Core/Src/main.c:567:19: error: request for member 'config' in something not a structure or union
+  567 |         pulse_para.config.duty_cycle=read_data_from_flash(Adrr_flash.Adrr_duty_cycle);
+      |                   ^
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:572:24: error: request for member 'numer_of_pulses' in something not a structure or union
+  572 |           if(pulse_para.numer_of_pulses==1){
+      |                        ^
+../Core/Src/main.c:573:151: error: request for member 'total_pulse_generated' in something not a structure or union
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                       ^
+../Core/Src/main.c:573:184: error: request for member 'config' in something not a structure or union
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                        ^
+../Core/Src/main.c:573:206: error: request for member 'config' in something not a structure or union
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                              ^
+../Core/Src/main.c:573:229: error: request for member 'config' in something not a structure or union
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                                                     ^
+../Core/Src/main.c:573:252: error: request for member 'config' in something not a structure or union
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                                                                            ^
+../Core/Src/main.c:576:138: error: request for member 'numer_of_pulses' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                          ^
+../Core/Src/main.c:576:165: error: request for member 'total_pulse_generated' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                     ^
+../Core/Src/main.c:576:198: error: request for member 'config' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                      ^
+../Core/Src/main.c:576:220: error: request for member 'config' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                                            ^
+../Core/Src/main.c:576:243: error: request for member 'config' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                                                                   ^
+../Core/Src/main.c:576:266: error: request for member 'config' in something not a structure or union
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                                                                                                                                                          ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:47:29 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:240:37: error: 'flag' has no member named 'if_running'
+  240 |                           pulse_flag.if_running=1;
+      |                                     ^
+../Core/Src/main.c:241:37: error: 'flag' has no member named 'if_infinity'
+  241 |                           pulse_flag.if_infinity=1;
+      |                                     ^
+../Core/Src/main.c:246:71: error: 'flag' has no member named 'if_running'
+  246 |                          if(pulse_para.numer_of_pulses>0 && pulse_flag.if_running==1){
+      |                                                                       ^
+../Core/Src/main.c:248:43: error: 'flag' has no member named 'if_infinity'
+  248 |                                 pulse_flag.if_infinity=0;
+      |                                           ^
+../Core/Src/main.c:249:43: error: 'flag' has no member named 'if_running'
+  249 |                                 pulse_flag.if_running=1;
+      |                                           ^
+../Core/Src/main.c:256:36: error: 'flag' has no member named 'if_running'
+  256 |                          pulse_flag.if_running=0;
+      |                                    ^
+../Core/Src/main.c:257:39: error: 'flag' has no member named 'if_infinity'
+  257 |                          if(pulse_flag.if_infinity==1){
+      |                                       ^
+../Core/Src/main.c:261:44: error: 'flag' has no member named 'if_infinity'
+  261 |                          else if(pulse_flag.if_infinity==0){
+      |                                            ^
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:394:46: error: 'flag' has no member named 'if_running'
+  394 |                                 if(pulse_flag.if_running==1){
+      |                                              ^
+../Core/Src/main.c:487:38: error: 'flag' has no member named 'if_infinity'
+  487 |                         if(pulse_flag.if_infinity==0 || i==0){
+      |                                      ^
+../Core/Src/main.c:496:43: error: 'flag' has no member named 'if_infinity'
+  496 |                         else if(pulse_flag.if_infinity==1 || i==1){
+      |                                           ^
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:134: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type 'int' [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                      |                                                                                                                            |
+      |                                                                                                                                      long unsigned int                                                                                                            int
+      |                                                                                                                                    %u
+../Core/Src/main.c:576:121: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type 'int' [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                         |                                                                                                                                                       |
+      |                                                                                                                         long unsigned int                                                                                                                                       int
+      |                                                                                                                       %u
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:48:01 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:394:46: error: 'flag' has no member named 'if_running'
+  394 |                                 if(pulse_flag.if_running==1){
+      |                                              ^
+../Core/Src/main.c:487:38: error: 'flag' has no member named 'if_infinity'
+  487 |                         if(pulse_flag.if_infinity==0 || i==0){
+      |                                      ^
+../Core/Src/main.c:496:43: error: 'flag' has no member named 'if_infinity'
+  496 |                         else if(pulse_flag.if_infinity==1 || i==1){
+      |                                           ^
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:134: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type 'int' [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                      |                                                                                                                            |
+      |                                                                                                                                      long unsigned int                                                                                                            int
+      |                                                                                                                                    %u
+../Core/Src/main.c:576:121: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type 'int' [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                         |                                                                                                                                                       |
+      |                                                                                                                         long unsigned int                                                                                                                                       int
+      |                                                                                                                       %u
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:48:09 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:394:46: error: 'flag' has no member named 'if_running'
+  394 |                                 if(pulse_flag.if_running==1){
+      |                                              ^
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:134: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type 'int' [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                      |                                                                                                                            |
+      |                                                                                                                                      long unsigned int                                                                                                            int
+      |                                                                                                                                    %u
+../Core/Src/main.c:576:121: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type 'int' [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                         |                                                                                                                                                       |
+      |                                                                                                                         long unsigned int                                                                                                                                       int
+      |                                                                                                                       %u
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:48:14 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:134: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type 'int' [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                      |                                                                                                                            |
+      |                                                                                                                                      long unsigned int                                                                                                            int
+      |                                                                                                                                    %u
+../Core/Src/main.c:576:121: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type 'int' [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                         |                                                                                                                                                       |
+      |                                                                                                                         long unsigned int                                                                                                                                       int
+      |                                                                                                                       %u
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27872	    508	   2284	  30664	   77c8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:48:55 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:92: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%u,Ton:%lu,Toff:%lu,Freq:%u,Duty_cycle:%u\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                           ~^                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                            |                                                       |
+      |                                                                                            unsigned int                                            uint32_t {aka long unsigned int}
+      |                                                                                           %lu
+../Core/Src/main.c:573:117: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%u,Ton:%lu,Toff:%lu,Freq:%u,Duty_cycle:%u\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                    ~^                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                     |                                                                                                                   |
+      |                                                                                                                     unsigned int                                                                                                        uint32_t {aka long unsigned int}
+      |                                                                                                                    %lu
+../Core/Src/main.c:576:79: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%u,Ton:%u,Toff:%u,Freq:%u,Duty cycle:%u\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                              ~^                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                               |                                                                                |
+      |                                                                               unsigned int                                                                     uint32_t {aka long unsigned int}
+      |                                                                              %lu
+../Core/Src/main.c:576:86: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%u,Ton:%u,Toff:%u,Freq:%u,Duty cycle:%u\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                     ~^                                                                                                ~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                      |                                                                                                                 |
+      |                                                                                      unsigned int                                                                                                      uint32_t {aka long unsigned int}
+      |                                                                                     %lu
+../Core/Src/main.c:576:94: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%u,Ton:%u,Toff:%u,Freq:%u,Duty cycle:%u\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                             ~^                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                              |                                                                                                                               |
+      |                                                                                              unsigned int                                                                                                                    uint32_t {aka long unsigned int}
+      |                                                                                             %lu
+../Core/Src/main.c:576:102: warning: format '%u' expects argument of type 'unsigned int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%u,Ton:%u,Toff:%u,Freq:%u,Duty cycle:%u\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                     ~^                                                                                                                             ~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                      |                                                                                                                                              |
+      |                                                                                                      unsigned int                                                                                                                                   uint32_t {aka long unsigned int}
+      |                                                                                                     %lu
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27860	    508	   2284	  30652	   77bc	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:49:20 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:134: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type 'int' [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%lu\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                      |                                                                                                                            |
+      |                                                                                                                                      long unsigned int                                                                                                            int
+      |                                                                                                                                    %u
+../Core/Src/main.c:576:121: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type 'int' [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%lu\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                         |                                                                                                                                                       |
+      |                                                                                                                         long unsigned int                                                                                                                                       int
+      |                                                                                                                       %u
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27872	    508	   2284	  30664	   77c8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:49:39 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27868	    508	   2284	  30660	   77c4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:50:42 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27868	    508	   2284	  30660	   77c4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+20:51:45 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27872	    508	   2284	  30664	   77c8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+20:59:25 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:259:140: error: subscripted value is neither array nor pointer nor vector
+  259 |                                 save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,sizeof(pulse_para)/sizeof(pulse_para[0]));
+      |                                                                                                                                            ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+20:59:40 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:259:141: error: subscripted value is neither array nor pointer nor vector
+  259 |                                 save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,(sizeof(pulse_para)/sizeof(pulse_para[0])));
+      |                                                                                                                                             ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:00:29 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:259:74: error: subscripted value is neither array nor pointer nor vector
+  259 |                                 size=sizeof(pulse_para)/sizeof(pulse_para[0]);
+      |                                                                          ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:00:53 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:259:74: error: subscripted value is neither array nor pointer nor vector
+  259 |                                 size=sizeof(pulse_para)/sizeof(pulse_para[0]);
+      |                                                                          ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:01:06 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:258:81: error: subscripted value is neither array nor pointer nor vector
+  258 |                                 size_t size=sizeof(pulse_para)/sizeof(pulse_para[0]);
+      |                                                                                 ^
+../Core/Src/main.c:259:74: error: subscripted value is neither array nor pointer nor vector
+  259 |                                 size=sizeof(pulse_para)/sizeof(pulse_para[0]);
+      |                                                                          ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:01:24 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27872	    508	   2284	  30664	   77c8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:01:29 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27872	    508	   2284	  30664	   77c8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:02:50 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:573:133: warning: format '%u' expects argument of type 'unsigned int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  573 |                  sprintf(line_buffer,"User chose to generate infinity pulses,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty_cycle:%u\r\n",pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                                    ~^                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                                     |                                                                                                                            |
+      |                                                                                                                                     unsigned int                                                                                                                 uint32_t {aka long unsigned int}
+      |                                                                                                                                    %lu
+../Core/Src/main.c:576:120: warning: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  576 |                   sprintf(line_buffer,"How many pulses left:%lu,Total pulses:%lu,Ton:%lu,Toff:%lu,Freq:%lu,Duty cycle:%u\r\n",pulse_para.numer_of_pulses,pulse_para.total_pulse_generated,pulse_para.config.Ton,pulse_para.config.Toff,pulse_para.config.freq,pulse_para.config.duty_cycle);
+      |                                                                                                                       ~^                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                        |                                                                                                                                                       |
+      |                                                                                                                        unsigned int                                                                                                                                            uint32_t {aka long unsigned int}
+      |                                                                                                                       %lu
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27108	    508	   2292	  29908	   74d4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:07:04 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27112	    508	   2292	  29912	   74d8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:07:08 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27112	    508	   2292	  29912	   74d8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:08:54 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27128	    508	   2292	  29928	   74e8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:12:32 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:16:41 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27088	    508	   2292	  29888	   74c0	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:19:24 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:487:28: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  487 |                         if(pulse_para.if_infinity=0){
+      |                            ^~~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27044	    508	   2292	  29844	   7494	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:19:45 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:21:36 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:23:37 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:23:53 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:25:08 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:25:54 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27068	    508	   2292	  29868	   74ac	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:28:41 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:28:58 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:31:49 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:33:06 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:33:25 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27076	    508	   2292	  29876	   74b4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:35:31 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27028	    508	   2292	  29828	   7484	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:35:50 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27016	    508	   2292	  29816	   7478	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:36:10 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27016	    508	   2292	  29816	   7478	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:39:05 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  26984	    508	   2292	  29784	   7458	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:44:37 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:261:53: error: lvalue required as left operand of assignment
+  261 |                                 ptr_to_data_struct+1=0;
+      |                                                     ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:44:55 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27012	    508	   2292	  29812	   7474	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:45:09 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:261:55: error: lvalue required as left operand of assignment
+  261 |                                 (ptr_to_data_struct+1)=0;
+      |                                                       ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:45:26 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27012	    508	   2292	  29812	   7474	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:45:36 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27012	    508	   2292	  29812	   7474	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:45:56 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27012	    508	   2292	  29812	   7474	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:48:14 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27012	    508	   2292	  29812	   7474	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:50:39 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:564:26: error: 'size' undeclared (first use in this function); did you mean 'size_t'?
+  564 |           for(int i =0;i<size;i++){
+      |                          ^~~~
+      |                          size_t
+../Core/Src/main.c:564:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+21:51:38 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27028	    512	   2296	  29836	   748c	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:51:44 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27028	    512	   2296	  29836	   748c	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+21:54:00 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27028	    512	   2296	  29836	   748c	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:56:05 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27028	    512	   2296	  29836	   748c	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+21:57:39 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27040	    512	   2296	  29848	   7498	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:05:19 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27040	    512	   2296	  29848	   7498	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:05:32 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27040	    512	   2296	  29848	   7498	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:08:21 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27040	    512	   2296	  29848	   7498	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:10:53 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27040	    512	   2296	  29848	   7498	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:11:24 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27116	    512	   2296	  29924	   74e4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:11:42 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27116	    512	   2296	  29924	   74e4	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:15:11 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27056	    512	   2296	  29864	   74a8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:15:33 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27056	    512	   2296	  29864	   74a8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:20:55 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27056	    512	   2296	  29864	   74a8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:29:12 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27140	    512	   2296	  29948	   74fc	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:29:33 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27140	    512	   2296	  29948	   74fc	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:29:50 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27140	    512	   2296	  29948	   74fc	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:31:44 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27140	    512	   2296	  29948	   74fc	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+22:34:33 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:39:19 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.o"
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pulse_gen.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pulse_gen.d" -MT"Core/Src/pulse_gen.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pulse_gen.o"
+arm-none-eabi-gcc "../Core/Src/standby.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/standby.d" -MT"Core/Src/standby.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/standby.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l0xx_hal_msp.d" -MT"Core/Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l0xx_it.d" -MT"Core/Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l0xx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l0xx.d" -MT"Core/Src/system_stm32l0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32l0xx.o"
+arm-none-eabi-gcc "../Core/Src/tim6.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim6.d" -MT"Core/Src/tim6.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim6.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:42:37 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l0xx_hal_msp.d" -MT"Core/Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+22:42:55 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-size   Impulsator_2.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 

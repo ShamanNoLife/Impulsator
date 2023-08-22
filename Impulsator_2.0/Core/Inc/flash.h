@@ -10,8 +10,7 @@
 
 #include "main.h"
 
-void save_data_1(uint32_t Adrr, uint32_t data);
-void save_data_2(uint32_t Adrr, uint32_t* data);
-uint32_t read_data(uint32_t Address);
-void erase_data(uint32_t Address);
+void save_data_to_flash(uint32_t Adrr, uint32_t* data, uint32_t size);
+uint32_t read_data_from_flash(uint32_t Address);
+void erase_data_from_flash(uint32_t Address);
 #endif /* INC_FLASH_H_ */
