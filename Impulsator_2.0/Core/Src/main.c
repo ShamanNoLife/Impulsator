@@ -41,7 +41,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LINE_MAX_LENGTH 120
+#define LINE_MAX_LENGTH 90
 #define MAX_TOKENS 4
 #define IF_INFINITY 4
 #define PVD 8
@@ -101,6 +101,7 @@ typedef struct {
 typedef struct{
 	uint32_t pvd;
 	uint32_t save;
+	uint8_t command_was_sent;
 }flag;
 
 Adrress Adrr_flash;
@@ -249,6 +250,10 @@ int main(void)
 	  if(pulse_flag.pvd==0){
 		  POWER_LED_PORT->ODR|=POWER_LED_PIN;
 	  }
+	  if(pulse_flag.command_was_sent==1){
+		  display_menu(*line_buffer);
+		  pulse_flag.command_was_sent=0;
+	  }
 	  switch(state){
 	  	  case RUNNING_INFI:
 	  		generate_pulse();
@@ -261,10 +266,10 @@ int main(void)
 	  			state=RUNNING_N_TIMES;
 	  			pulse_parameter.if_infinity=0;
 	  		  }
-	  		 else{
+	  		else{
 	  			state=SAVE_DATA;
 	  		  }
-	  		 break;
+	  		break;
 	  	  case SAVE_DATA:
 	  		save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,size_of_config);
 	  		pulse_flag.save=1;
@@ -350,10 +355,8 @@ void SystemClock_Config(void)
 void GPIO_LEDS(void){
 	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
 
-	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
-	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE1)) | (GPIO_MODER_MODE1_0));
-	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE15)) | (GPIO_MODER_MODE15_0));
-	GPIOB->MODER &= ((GPIOB->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
+	STATUS_LED_PORT->MODER &= ((STATUS_LED_PORT->MODER & ~(GPIO_MODER_MODE5)) | (GPIO_MODER_MODE5_0));
+	POWER_LED_PORT->MODER &= ((POWER_LED_PORT->MODER & ~(GPIO_MODER_MODE3)) | (GPIO_MODER_MODE3_0));
 }
 
 void PG_init(void){
@@ -363,14 +366,12 @@ void PG_init(void){
 	PULSE_PORT -> MODER = (GPIO_MODER_MODE1_0)|(GPIOA->MODER & ~GPIO_MODER_MODE1);
 	PULSE_PORT -> MODER = (GPIO_MODER_MODE6_0)|(GPIOA->MODER & ~GPIO_MODER_MODE6);
 
-	PULSE_PORT-> BSRR |= (1U<<0);
-	PULSE_PORT-> BSRR |= (1U<<1);
-	PULSE_PORT-> BSRR |= (1U<<6);
+	PULSE_PORT-> BSRR |= PULSE_HIGH;
 }
 
 void MENU_USB(uint8_t value){
  		if (value == '\r' || value == '\n') {
- 			display_menu(*line_buffer);
+ 			pulse_flag.command_was_sent=1;
 		}
  		else if (value == '\177') {
  			if (line_length > 0) {
@@ -482,7 +483,7 @@ void display_menu(char table){
 			state=READ_DATA;
 		}
 		else if (strcmp(line_buffer, "cont") == 0){
-			read();
+			read_data();
 			erase_data_from_flash(Adrr_flash.Adrr_numer_of_pulses);
 			if(pulse_parameter.if_infinity==0){
             	if(pulse_parameter.numer_of_pulses!=0){
