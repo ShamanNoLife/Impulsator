@@ -7,11 +7,11 @@
 
 #include "flash.h"
 
-void save_data_to_flash(uint32_t Address, uint32_t* data, uint8_t size_of_config){
+void save_data_to_flash(uint32_t Adrr, uint32_t* data, uint32_t size_of_config){
     HAL_FLASH_Unlock();
 
-	for(int i =0;i<size_of_config;i++){
-		HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Address+i*4,*(data+i));
+	for(int i =0;i<size;i++){
+		HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Adrr+i*4,*(data+i));
 	}
 
 	HAL_FLASH_Lock();

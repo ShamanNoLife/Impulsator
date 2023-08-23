@@ -12,7 +12,7 @@
 ../Core/Src/main.c:516:10:ASCII_TO_uint8_t	32	static
 ../Core/Src/main.c:532:6:splitString	40	static
 ../Core/Src/main.c:546:6:generate_pulse	8	static
-../Core/Src/main.c:556:6:read	8	static
-../Core/Src/main.c:566:6:display	48	static
+../Core/Src/main.c:556:6:read_data	8	static
+../Core/Src/main.c:566:6:display_data	48	static
 ../Core/Src/main.c:582:6:TIM6_DAC_IRQHandler	8	static
 ../Core/Src/main.c:594:6:Error_Handler	8	static,ignoring_inline_asm

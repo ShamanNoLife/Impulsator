@@ -7342,3 +7342,167 @@ arm-none-eabi-size   Impulsator_2.0.elf
   27128	    512	   2296	  29936	   74f0	Impulsator_2.0.elf
 Finished building: default.size.stdout
  
+08:01:21 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'save_data_to_flash':
+../Core/Src/flash.c:13:24: error: 'size' undeclared (first use in this function); did you mean 'size_t'?
+   13 |         for(int i =0;i<size;i++){
+      |                        ^~~~
+      |                        size_t
+../Core/Src/flash.c:13:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/flash.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:577:26: error: 'size' undeclared (first use in this function); did you mean 'size_t'?
+  577 |           for(int i =0;i<size;i++){
+      |                          ^~~~
+      |                          size_t
+../Core/Src/main.c:577:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:01:33 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:577:26: error: 'size' undeclared (first use in this function); did you mean 'size_t'?
+  577 |           for(int i =0;i<size;i++){
+      |                          ^~~~
+      |                          size_t
+../Core/Src/main.c:577:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:01:42 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27120	    512	   2296	  29928	   74e8	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+08:02:05 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27124	    512	   2296	  29932	   74ec	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+08:03:11 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/flash.c: In function 'save_data_to_flash':
+../Core/Src/flash.c:14:58: error: 'Adrr' undeclared (first use in this function)
+   14 |                 HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,Adrr+i*4,*(data+i));
+      |                                                          ^~~~
+../Core/Src/flash.c:14:58: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/flash.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:279:25: warning: implicit declaration of function 'read'; did you mean 'fread'? [-Wimplicit-function-declaration]
+  279 |                         read();
+      |                         ^~~~
+      |                         fread
+../Core/Src/main.c:283:25: warning: implicit declaration of function 'display' [-Wimplicit-function-declaration]
+  283 |                         display();
+      |                         ^~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:03:21 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/flash.d" -MT"Core/Src/flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flash.o"
+../Core/Src/flash.c: In function 'erase_data_from_flash':
+../Core/Src/flash.c:35:32: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   35 |                         return HAL_ERROR;
+      |                                ^~~~~~~~~
+../Core/Src/flash.c:26:6: note: declared here
+   26 | void erase_data_from_flash(uint32_t Address){
+      |      ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/Dell/OneDrive/Pulpit/STAZ/Impulsator_2.0/Debug/../Core/Src/main.c:283: undefined reference to `display'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: Impulsator_2.0.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:03:31 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:279:25: warning: implicit declaration of function 'read'; did you mean 'fread'? [-Wimplicit-function-declaration]
+  279 |                         read();
+      |                         ^~~~
+      |                         fread
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  26992	    512	   2296	  29800	   7468	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 
+08:03:35 **** Incremental Build of configuration Debug for project Impulsator_2.0 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L073xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display_menu':
+../Core/Src/main.c:485:25: warning: implicit declaration of function 'read'; did you mean 'fread'? [-Wimplicit-function-declaration]
+  485 |                         read();
+      |                         ^~~~
+      |                         fread
+arm-none-eabi-gcc -o "Impulsator_2.0.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Dell\OneDrive\Pulpit\STAZ\Impulsator_2.0\STM32L073RZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Impulsator_2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Impulsator_2.0.elf
+ 
+arm-none-eabi-size   Impulsator_2.0.elf 
+arm-none-eabi-objdump -h -S  Impulsator_2.0.elf  > "Impulsator_2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  27148	    512	   2296	  29956	   7504	Impulsator_2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Impulsator_2.0.list
+ 

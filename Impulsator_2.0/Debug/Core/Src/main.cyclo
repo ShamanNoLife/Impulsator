@@ -1,6 +1,6 @@
 ../Core/Src/main.c:149:5:__io_putchar	1
 ../Core/Src/main.c:155:6:HAL_UART_RxCpltCallback	2
-../Core/Src/main.c:163:6:TIM6_Callback	3
+../Core/Src/main.c:163:6:TIM6_Callback	2
 ../Core/Src/main.c:172:6:HAL_PWR_PVDCallback	2
 ../Core/Src/main.c:186:6:HAL_GPIO_EXTI_Callback	3
 ../Core/Src/main.c:206:5:main	13
@@ -12,7 +12,7 @@
 ../Core/Src/main.c:516:10:ASCII_TO_uint8_t	4
 ../Core/Src/main.c:532:6:splitString	3
 ../Core/Src/main.c:546:6:generate_pulse	7
-../Core/Src/main.c:556:6:read	1
-../Core/Src/main.c:566:6:display	4
+../Core/Src/main.c:556:6:read_data	1
+../Core/Src/main.c:566:6:display_data	4
 ../Core/Src/main.c:582:6:TIM6_DAC_IRQHandler	2
 ../Core/Src/main.c:594:6:Error_Handler	1

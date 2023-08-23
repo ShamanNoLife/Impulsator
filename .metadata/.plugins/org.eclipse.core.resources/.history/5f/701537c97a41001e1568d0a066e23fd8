@@ -276,11 +276,11 @@ int main(void)
 	  		  }
 	  		break;
 	  	  case READ_DATA:
-	  		read_data();
+	  		read();
 	  		state=DISPLAY_DATA;
 	  		break;
 	  	  case DISPLAY_DATA:
-	  		display_data();
+	  		display();
 	  		state=DONE;
 	  		break;
 	  	  case DONE:
