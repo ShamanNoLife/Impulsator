@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "rtc.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -99,8 +100,8 @@ typedef struct {
 } running_state;
 
 typedef struct{
-	uint32_t pvd;
-	uint32_t save;
+	uint8_t pvd;
+	uint8_t save;
 	uint8_t command_was_sent;
 }flag;
 
@@ -110,6 +111,7 @@ running_state pulse_parameter;
 
 uint32_t* ptr_to_data_struct = (uint32_t*)&pulse_parameter;
 uint8_t value;
+uint8_t test1='1',test2='2',test3='3';
 static size_t size_of_config=sizeof(pulse_parameter)/sizeof(pulse_parameter.numer_of_pulses);
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
@@ -130,9 +132,11 @@ void SystemClock_Config(void);
 void STANDBY(void);
 void MENU_USB(uint8_t data);
 void display_menu(char table);
+void PVD_init(void);
 void PG_init(void);
 void TIM6_init(void);
 void GPIO_LEDS(void);
+void Adrress_init(void);
 void generate_pulse(void);
 void read_data(void);
 void display_data(void);
@@ -149,7 +153,7 @@ void TIM6_Callback(void);
 /* USER CODE BEGIN 0 */
 int __io_putchar(int ch)
 {
-    HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, 0);
+    HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, 0);\
     return 1;
 }
 
@@ -172,7 +176,8 @@ void TIM6_Callback(void){
 
 void HAL_PWR_PVDCallback(void){
 	static bool was_executed = false;
-    if (was_executed) {
+	if (was_executed) {
+		HAL_UART_Transmit_IT(&huart4, &test1 ,1);
     	POWER_LED_PORT->ODR=~POWER_LED_PIN;
     	pulse_flag.pvd=1;
 		pulse_parameter.if_running=0;
@@ -188,6 +193,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
   if(GPIO_Pin == GPIO_PIN_13) {
 		static bool was_executed = true;
 	    if (was_executed) {
+	    	HAL_UART_Transmit_IT(&huart4, &test1 ,1);
 	    	POWER_LED_PORT->ODR=~POWER_LED_PIN;
 	    	pulse_flag.pvd=1;
 			pulse_parameter.if_running=0;
@@ -207,14 +213,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
-	Adrr_flash.Adrr_total_pulse_generated=0x0800FFA4;
-	Adrr_flash.Adrr_Ton=0x0800FFB0;
-	Adrr_flash.Adrr_Toff=0x0800FFB4;
-	Adrr_flash.Adrr_freq=0x0800FFA8;
-	Adrr_flash.Adrr_duty_cycle=0x0800FFAC;
-	Adrr_flash.Adrr_if_infinitive=0x0800FFBC;
-	state=DONE;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -223,9 +222,12 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  PVD_init();
   PG_init();
   GPIO_LEDS();
   TIM6_init();
+  Adrress_init();
+  state=DONE;
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -238,15 +240,17 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+  MX_USART4_UART_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
+	  //HAL_UART_Transmit_IT(&huart4, &test3 ,1);
 	  if(pulse_flag.pvd==0){
 		  POWER_LED_PORT->ODR|=POWER_LED_PIN;
 	  }
@@ -273,12 +277,14 @@ int main(void)
 	  	  case SAVE_DATA:
 	  		save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,size_of_config);
 	  		pulse_flag.save=1;
+	  		HAL_UART_Transmit_IT(&huart4, &test2 ,1);
 	  		if(pulse_flag.pvd==0){
 	  			state=READ_DATA;
 	  		  }
 	  		else{
 	  			state=DONE;
 	  		  }
+
 	  		break;
 	  	  case READ_DATA:
 	  		read_data();
@@ -292,7 +298,9 @@ int main(void)
 	  		break;
 	  	  }
 	  if(pulse_flag.pvd==1 && pulse_flag.save==1){
-		STANDBY();
+		HAL_UART_Transmit_IT(&huart4, &test3 ,1);
+		HAL_Delay(2000);
+		//STANDBY();
 	  }
   }
     /* USER CODE END WHILE */
@@ -319,7 +327,8 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
@@ -342,8 +351,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_RTC;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_SYSCLK;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -367,6 +377,16 @@ void PG_init(void){
 	PULSE_PORT -> MODER = (GPIO_MODER_MODE6_0)|(GPIOA->MODER & ~GPIO_MODER_MODE6);
 
 	PULSE_PORT-> BSRR |= PULSE_HIGH;
+}
+
+void Adrress_init(void){
+	Adrr_flash.Adrr_numer_of_pulses=0x0800FFA0;
+	Adrr_flash.Adrr_total_pulse_generated=0x0800FFA4;
+	Adrr_flash.Adrr_Ton=0x0800FFB0;
+	Adrr_flash.Adrr_Toff=0x0800FFB4;
+	Adrr_flash.Adrr_freq=0x0800FFA8;
+	Adrr_flash.Adrr_duty_cycle=0x0800FFAC;
+	Adrr_flash.Adrr_if_infinitive=0x0800FFBC;
 }
 
 void MENU_USB(uint8_t value){
