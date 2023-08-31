@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "rtc.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -44,8 +43,13 @@
 /* USER CODE BEGIN PD */
 #define LINE_MAX_LENGTH 90
 #define MAX_TOKENS 4
-#define IF_INFINITY 4
-#define PVD 8
+
+#define MAX_VALUE pulse_parameter.numer_of_pulses<4294967295 ? 1 : 0
+#define CHECK_ODR_IF_LOW (((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6))? 1 : 0)
+#define CHECK_PULSE_PARAMETER_IF_0_IF_INFI(x,y) ((x=0 || y==0) ? 1 : 0)
+#define CHECK_PULSE_PARAMETER_IF_0_IF_N_PULSES(x,y,z) ((x==0 || y==0 || z==0)? 1 : 0)
+#define CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100 (pulse_parameter.config.duty_cycle>=100 ? 1 : 0)
+
 #define SIZE_OF_VARIABLE 10
 #define PULSE_PORT GPIOA
 #define PULSE_LOW ~(1U<<0) & ~(1U<<1) & ~(1U<<6)
@@ -111,13 +115,14 @@ running_state pulse_parameter;
 
 uint32_t* ptr_to_data_struct = (uint32_t*)&pulse_parameter;
 uint8_t value;
-uint8_t test1='1',test2='2',test3='3';
+
+
 static size_t size_of_config=sizeof(pulse_parameter)/sizeof(pulse_parameter.numer_of_pulses);
 static char line_buffer[LINE_MAX_LENGTH + 1];
 char* tokens[MAX_TOKENS];
 static uint32_t line_length;
-static char menu[]="\n\r---------------HOW TO USE---------------\n\rrun: Start a program\n\rstop: Stop a program\n\r"
-				   "read: To read value (only if usb cable was off)\n\rcont: To continue\n\r";
+static char menu[]="\n\r---------------HOW TO USE---------------\n\rrun: Start a program\n\rread: Stop and read a variables\n\r"
+				   "cont: To continue\n\r";
 static char error[]="\n\rWrong key\n\r";
 static char error_with_run[]="\r\nrun num freq duty cycle(max 99) or run oo(infinitive) freq duty cycle(max 99)\n\r "
 							 "\n\r Where num mean how many pulses we want to generate, freq means frequency\n\r";
@@ -132,7 +137,6 @@ void SystemClock_Config(void);
 void STANDBY(void);
 void MENU_USB(uint8_t data);
 void display_menu(char table);
-void PVD_init(void);
 void PG_init(void);
 void TIM6_init(void);
 void GPIO_LEDS(void);
@@ -177,31 +181,14 @@ void TIM6_Callback(void){
 void HAL_PWR_PVDCallback(void){
 	static bool was_executed = false;
 	if (was_executed) {
-		HAL_UART_Transmit_IT(&huart4, &test1 ,1);
-    	POWER_LED_PORT->ODR=~POWER_LED_PIN;
-    	pulse_flag.pvd=1;
-		pulse_parameter.if_running=0;
-		state=SAVE_DATA;
+  		save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,size_of_config);
+  		STANDBY();
     }
     else{
     	was_executed=true;
     	pulse_flag.pvd=0;
-    }
-}
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-  if(GPIO_Pin == GPIO_PIN_13) {
-		static bool was_executed = true;
-	    if (was_executed) {
-	    	HAL_UART_Transmit_IT(&huart4, &test1 ,1);
-	    	POWER_LED_PORT->ODR=~POWER_LED_PIN;
-	    	pulse_flag.pvd=1;
-			pulse_parameter.if_running=0;
-			state=SAVE_DATA;
-	    }
-  } else {
-    __NOP();
-  }
+    }
 }
 
 /* USER CODE END 0 */
@@ -222,7 +209,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  PVD_init();
+  //PVD_init();
   PG_init();
   GPIO_LEDS();
   TIM6_init();
@@ -241,8 +228,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_USART4_UART_Init();
-  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
+
   printf(menu);
   HAL_UART_Receive_IT(&huart2, &value, 1);
   /* USER CODE END 2 */
@@ -277,14 +264,8 @@ int main(void)
 	  	  case SAVE_DATA:
 	  		save_data_to_flash(Adrr_flash.Adrr_numer_of_pulses, ptr_to_data_struct,size_of_config);
 	  		pulse_flag.save=1;
-	  		HAL_UART_Transmit_IT(&huart4, &test2 ,1);
-	  		if(pulse_flag.pvd==0){
-	  			state=READ_DATA;
-	  		  }
-	  		else{
-	  			state=DONE;
-	  		  }
-
+	  		HAL_Delay(100);
+	  		state=READ_DATA;
 	  		break;
 	  	  case READ_DATA:
 	  		read_data();
@@ -297,11 +278,6 @@ int main(void)
 	  	  case DONE:
 	  		break;
 	  	  }
-	  if(pulse_flag.pvd==1 && pulse_flag.save==1){
-		HAL_UART_Transmit_IT(&huart4, &test3 ,1);
-		HAL_Delay(2000);
-		//STANDBY();
-	  }
   }
     /* USER CODE END WHILE */
 
@@ -327,8 +303,7 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
@@ -351,9 +326,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_RTC;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_SYSCLK;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -410,8 +384,8 @@ void MENU_USB(uint8_t value){
 }
 
 void display_menu(char table){
-	int result;
-	char * ptr;
+	int if_variable_is_digital;
+	char * if_user_choose_infi;
 	if (line_length > 0) {
 		line_buffer[line_length] = '\0';
 			if (strncmp(line_buffer, "run",3) == 0) {
@@ -420,26 +394,26 @@ void display_menu(char table){
 				}
 				else{
 					splitString(line_buffer, tokens);
-					ptr=strpbrk(tokens[1], "oo");
-					if((!(ptr==NULL)) && state!=RUNNING_N_TIMES){
+					if_user_choose_infi=strpbrk(tokens[1], "oo");
+					if((!(if_user_choose_infi==NULL)) && state!=RUNNING_N_TIMES){
 						for(int i=2;i<MAX_TOKENS;i++){
-							result=1;
+							if_variable_is_digital=1;
 							for(int j=0;j<strlen(tokens[i]);j++){
 								if(!isdigit((unsigned char)tokens[i][j])){
-									result=0;
+									if_variable_is_digital=0;
 								}
 							}
-							if(result==0){
+							if(if_variable_is_digital==0){
 								break;
 							}
 						}
-						if(result!=0){
+						if(if_variable_is_digital!=0){
 							pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 							pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-								if(pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0){
+								if(CHECK_PULSE_PARAMETER_IF_0_IF_INFI(pulse_parameter.config.freq,pulse_parameter.config.duty_cycle)){
 									printf(error_with_run);
 								}
-								else if(pulse_parameter.config.duty_cycle>=100 || pulse_parameter.config.duty_cycle==0){
+								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
 									printf(error_with_duty_cycle);
 								}
 								else{
@@ -455,26 +429,27 @@ void display_menu(char table){
 							printf(error_with_run);
 						}
 					}
-					else if (ptr==NULL && state!=RUNNING_INFI){
+					else if (if_user_choose_infi==NULL && state!=RUNNING_INFI){
 						for(int i=1;i<MAX_TOKENS;i++){
-							result=1;
+							if_variable_is_digital=1;
 							for(int j=0;j<strlen(tokens[i]);j++){
 								if(!isdigit((unsigned char)tokens[i][j])){
-									result=0;
+									if_variable_is_digital=0;
 								}
 							}
-							if(result==0){
+							if(if_variable_is_digital==0){
 								break;
 							}
 						}
-							if(result!=0){
+							if(if_variable_is_digital!=0){
 								pulse_parameter.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
 								pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 								pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-								if(pulse_parameter.numer_of_pulses==0 || pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0 ){
+
+								if(MAX_VALUE && CHECK_PULSE_PARAMETER_IF_0_IF_N_PULSES(pulse_parameter.numer_of_pulses,pulse_parameter.config.freq,pulse_parameter.config.duty_cycle)){
 									printf(error_with_run);
 								}
-								else if(pulse_parameter.config.duty_cycle>=100 || pulse_parameter.config.duty_cycle==0){
+								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
 									printf(error_with_duty_cycle);
 								}
 								else{
@@ -495,12 +470,9 @@ void display_menu(char table){
 					}
 				}
 		}
-		else if (strcmp(line_buffer, "stop") == 0){
+		else if (strcmp(line_buffer, "read") == 0){
 			pulse_parameter.if_running=0;
 			state=SAVE_DATA;
-		}
-		else if (strcmp(line_buffer, "read") == 0){
-			state=READ_DATA;
 		}
 		else if (strcmp(line_buffer, "cont") == 0){
 			read_data();
@@ -534,6 +506,7 @@ void display_menu(char table){
 		printf(menu);
 	}
 }
+
 uint32_t ASCII_TO_uint8_t(const char *table){
 	uint32_t result = 0;
 	uint32_t numeric_value=0;
@@ -566,10 +539,10 @@ void splitString(const char* input_string, char** tokens) {
 
 void generate_pulse(void){
 	  PULSE_PORT->BSRR = PULSE_LOW;
-	  while((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  while(CHECK_ODR_IF_LOW){}
 	  HAL_Delay((uint32_t)pulse_parameter.config.Ton);
 	  PULSE_PORT->BSRR |= PULSE_HIGH;
-	  while(!(PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6)){}
+	  while(!CHECK_ODR_IF_LOW){}
 	  HAL_Delay((uint32_t)pulse_parameter.config.Toff);
 	  (pulse_parameter.total_pulse_generated)++;
 }
@@ -606,6 +579,8 @@ void TIM6_IRQHandler(void){
 		TIM6_Callback();
 	}
 }
+
+
 /* USER CODE END 4 */
 
 /**
