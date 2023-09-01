@@ -141,6 +141,7 @@ void read_data(void);
 void display_data(void);
 void save_data_to_flash(uint32_t Address, uint32_t* data, uint8_t size_of_config);
 void erase_data_from_flash(uint32_t Address);
+uint8_t if_equal_zero(running_state struct_of_pulse_config);
 uint32_t read_data_from_flash(uint32_t Address);
 uint32_t ASCII_TO_uint8_t(const char *table);
 void splitString(const char* input_string, char** tokens);
@@ -222,7 +223,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_USART4_UART_Init();
   /* USER CODE BEGIN 2 */
 
   printf(menu);
@@ -242,14 +242,12 @@ int main(void)
 	  switch(state){
 	  	  case RUNNING_INFI:
 	  		generate_pulse();
-	  		pulse_parameter.if_infinity=1;
 	  		break;
 	  	  case RUNNING_N_TIMES:
 	  		generate_pulse();
 	  		(pulse_parameter.numer_of_pulses)--;
 	  		if(pulse_parameter.numer_of_pulses>0 && pulse_parameter.if_running==1){
 	  			state=RUNNING_N_TIMES;
-	  			pulse_parameter.if_infinity=0;
 	  		  }
 	  		else{
 	  			state=SAVE_DATA;
@@ -402,9 +400,10 @@ void display_menu(char table){
 							}
 						}
 						if(if_variable_is_digital!=0){
+							pulse_parameter.if_infinity=1;
 							pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 							pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-								if(pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0){
+								if(if_equal_zero(pulse_parameter)){
 									printf(error_with_run);
 								}
 								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
@@ -436,11 +435,11 @@ void display_menu(char table){
 							}
 						}
 							if(if_variable_is_digital!=0){
+								pulse_parameter.if_infinity=0;
 								pulse_parameter.numer_of_pulses=ASCII_TO_uint8_t(tokens[1]);
 								pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 								pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-
-								if(MAX_VALUE(pulse_parameter.numer_of_pulses) || (pulse_parameter.numer_of_pulses==0 || pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0)){
+								if(if_equal_zero(pulse_parameter)){
 									printf(error_with_run);
 								}
 								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
@@ -549,6 +548,20 @@ void read_data(void){
 	pulse_parameter.config.Toff=read_data_from_flash(Adrr_flash.Adrr_Toff);
 	pulse_parameter.config.freq=read_data_from_flash(Adrr_flash.Adrr_freq);
 	pulse_parameter.config.duty_cycle=read_data_from_flash(Adrr_flash.Adrr_duty_cycle);
+}
+
+uint8_t if_equal_zero(running_state struct_of_pulse_config){
+	uint8_t result;
+	if(struct_of_pulse_config.if_infinity && (struct_of_pulse_config.config.freq==0 || struct_of_pulse_config.config.duty_cycle==0)){
+			result = 1;
+	}
+	else if(MAX_VALUE(struct_of_pulse_config.numer_of_pulses) || struct_of_pulse_config.numer_of_pulses==0|| struct_of_pulse_config.config.freq==0 || struct_of_pulse_config.config.duty_cycle==0){
+		result = 1;
+	}
+	else{
+		result = 0;
+	}
+	return result;
 }
 
 void display_data(void){
