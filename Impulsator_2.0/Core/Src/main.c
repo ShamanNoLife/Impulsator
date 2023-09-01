@@ -43,13 +43,6 @@
 /* USER CODE BEGIN PD */
 #define LINE_MAX_LENGTH 90
 #define MAX_TOKENS 4
-
-#define MAX_VALUE pulse_parameter.numer_of_pulses<4294967295 ? 1 : 0
-#define CHECK_ODR_IF_LOW (((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6))? 1 : 0)
-#define CHECK_PULSE_PARAMETER_IF_0_IF_INFI(x,y) ((x=0 || y==0) ? 1 : 0)
-#define CHECK_PULSE_PARAMETER_IF_0_IF_N_PULSES(x,y,z) ((x==0 || y==0 || z==0)? 1 : 0)
-#define CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100 (pulse_parameter.config.duty_cycle>=100 ? 1 : 0)
-
 #define SIZE_OF_VARIABLE 10
 #define PULSE_PORT GPIOA
 #define PULSE_LOW ~(1U<<0) & ~(1U<<1) & ~(1U<<6)
@@ -62,7 +55,9 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+#define MAX_VALUE(a) (a<4294967295) ? 0 : 1
+#define CHECK_ODR_IF_LOW (((PULSE_PORT->ODR & GPIO_ODR_OD0)&&(PULSE_PORT->ODR & GPIO_ODR_OD1)&&(PULSE_PORT->ODR & GPIO_ODR_OD6))? 1 : 0)
+#define CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100 (pulse_parameter.config.duty_cycle>=100 ? 1 : 0)
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -237,7 +232,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while(1){
-	  //HAL_UART_Transmit_IT(&huart4, &test3 ,1);
 	  if(pulse_flag.pvd==0){
 		  POWER_LED_PORT->ODR|=POWER_LED_PIN;
 	  }
@@ -410,7 +404,7 @@ void display_menu(char table){
 						if(if_variable_is_digital!=0){
 							pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 							pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
-								if(CHECK_PULSE_PARAMETER_IF_0_IF_INFI(pulse_parameter.config.freq,pulse_parameter.config.duty_cycle)){
+								if(pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0){
 									printf(error_with_run);
 								}
 								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
@@ -446,7 +440,7 @@ void display_menu(char table){
 								pulse_parameter.config.freq=ASCII_TO_uint8_t(tokens[2]);
 								pulse_parameter.config.duty_cycle=ASCII_TO_uint8_t(tokens[3]);
 
-								if(MAX_VALUE && CHECK_PULSE_PARAMETER_IF_0_IF_N_PULSES(pulse_parameter.numer_of_pulses,pulse_parameter.config.freq,pulse_parameter.config.duty_cycle)){
+								if(MAX_VALUE(pulse_parameter.numer_of_pulses) || (pulse_parameter.numer_of_pulses==0 || pulse_parameter.config.freq==0 || pulse_parameter.config.duty_cycle==0)){
 									printf(error_with_run);
 								}
 								else if(CHECK_DUTY_CYCLE_IF_GREATER_EQUAL_100){
